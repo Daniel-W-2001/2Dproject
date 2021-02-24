@@ -3139,7 +3139,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1216855393}
-  m_Text: '"W" to Enter'
+  m_Text: '"S" to Enter'
   m_OffsetZ: 0
   m_CharacterSize: 0.13
   m_LineSpacing: 1
@@ -3363,7 +3363,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1323840764}
-  m_Text: '"W" to Enter'
+  m_Text: '"S" to Enter'
   m_OffsetZ: 0
   m_CharacterSize: 0.13
   m_LineSpacing: 1
