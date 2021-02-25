@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Animations;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class Enemy2 : MonoBehaviour
 {
     // Enemy Part
     public EnemyObject scriptEnemy;
     private Animator animator;
+    private AnimatorController animController;
     public Transform player2;
 
     int currentHeatlh;
@@ -19,22 +22,48 @@ public class Enemy2 : MonoBehaviour
     private float attackRange;
     private LayerMask attackMask;
     private int attackDamage;
-
+    
+    // EnemyLooks
+    public Sprite[] bodyParts;
+    
     void Start()
     {
+        SetEnemy();
+        SetAttack();
+        //SetSprites();
+    }
+
+    //WIP
+    //void SetSprites() 
+    //{
+    //    bodyParts = FindObjectOfType<EnemyObject>().sprites;
+    //    
+    //
+    //    for (int i = 0; i < bodyParts.Length; i++)
+    //    {
+    //        
+    //    }
+    //}
+    void SetEnemy()
+    {
         // Enemy part
+        animController = scriptEnemy.animController;
+        GetComponent<Animator>().runtimeAnimatorController = animController;
         animator = GetComponent<Animator>();
         
         currentHeatlh = scriptEnemy.maxHealth;
         
         isFlipped = scriptEnemy.isFlipped;
-
+    }
+    void SetAttack()
+    {
         // Enemy Attack
         attackRange = scriptEnemy.attackRange;
         attackDamage = scriptEnemy.attackDamage;
         attackOffset = scriptEnemy.attackOffset;
         attackMask = scriptEnemy.attackMask;
     }
+    
     public void Attack()
     {
         Vector3 pos = transform.position;
