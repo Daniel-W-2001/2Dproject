@@ -9,14 +9,14 @@ public class RogueWalk : StateMachineBehaviour
 
     Transform player;
     Rigidbody2D rb;
-    Enemy enemy;
+    Enemy2 enemy;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         rb = animator.GetComponent<Rigidbody2D>();
-        enemy = animator.GetComponent<Enemy>();
+        enemy = animator.GetComponent<Enemy2>();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

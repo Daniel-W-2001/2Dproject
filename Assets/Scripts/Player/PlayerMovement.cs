@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    
     public float movementSpeed = 1f;
     public float jumpForce = 1f;
 
