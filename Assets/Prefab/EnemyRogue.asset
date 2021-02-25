@@ -21,16 +21,21 @@ MonoBehaviour:
   attackMask:
     serializedVersion: 2
     m_Bits: 64
-  head: {fileID: 21300000, guid: e17e5dd745f21b043bd6d387e5c5a19b, type: 3}
-  face: {fileID: 21300000, guid: 8e016bdb4d00e70429de56b91135940c, type: 3}
-  hood: {fileID: 21300000, guid: f7e7bed775fff8347b9e53c67e20875f, type: 3}
-  elbowL: {fileID: 21300000, guid: 48ecbe245379f214497aae538fe1d4f3, type: 3}
-  shoulderL: {fileID: 21300000, guid: 57e9977661e6a7246b75c2de487e5bb3, type: 3}
-  elbowR: {fileID: 21300000, guid: ece48dca5e286fd48b5dc0633b08b15d, type: 3}
-  shoulderR: {fileID: 21300000, guid: a471110b5fe3bcc4caff7ad9ff13d244, type: 3}
-  torso: {fileID: 21300000, guid: 90458a12b047bb84ba77cb7ea81ba457, type: 3}
-  bootL: {fileID: 21300000, guid: 6fa8902135d83ff49a376c05761b61d4, type: 3}
-  legL: {fileID: 21300000, guid: 40e550cd3b539f14eb98d42b6769b592, type: 3}
-  bootR: {fileID: 21300000, guid: ed569bcf23ebe674180d6ae7a5d29495, type: 3}
-  legR: {fileID: 21300000, guid: 7b78357522a34d64bb8775b962b0deb0, type: 3}
-  pelvis: {fileID: 21300000, guid: 27fe921d9d4bdb24eb91cc1e96a04f02, type: 3}
+  sprites:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 21300000, guid: 468244f274f38f64b85773c7888444b6, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
