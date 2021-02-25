@@ -15,6 +15,16 @@ public class PlayerCombat : MonoBehaviour
     public float attackRate = 2f;
     float nextAttackTime = 0f;
 
+    public int maxHealth = 100;
+    public int currentHealth;
+    public HealthBar healthBar;
+
+    void Start()
+    {
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
+    }
+
     void Update()
     {
         if (Time.time >= nextAttackTime)
@@ -24,6 +34,11 @@ public class PlayerCombat : MonoBehaviour
                 Attack();
                 nextAttackTime = Time.time + 1f / attackRate;
             }
+        }
+
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            TakeDamage(20);
         }
     }
 
@@ -40,6 +55,12 @@ public class PlayerCombat : MonoBehaviour
         {
             enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
         }
+    }
+
+    void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+        healthBar.SetHealth(currentHealth);
     }
 
     private void OnDrawGizmosSelected()
