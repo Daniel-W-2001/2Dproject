@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e48ca477049f2b4db60892f724727d3, type: 3}
   m_Name: StronkEnemyRogue
   m_EditorClassIdentifier: 
+  animController: {fileID: 9100000, guid: 3f91ccc83710e0140844bbc6f2ff40a4, type: 2}
   maxHealth: 100
   isFlipped: 0
   attackDamage: 25
