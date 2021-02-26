@@ -42,7 +42,7 @@ public class DoorSwitch : MonoBehaviour
     }
     private void Update()
     {
-        if ((radius == true) && Input.GetKeyDown(KeyCode.S)&& (open == false))
+        if ((radius == true) && Input.GetKeyDown(KeyCode.S) && (open == false))
         {
             leverOn.SetActive(true);
             leverOff.SetActive(false);
