@@ -83,7 +83,24 @@ public class Enemy2 : MonoBehaviour
         }
     }
 
-    public void LookAtPlayer()
+    void OnTriggerStay2D(Collider2D hitBox)
+    {
+        Rigidbody2D rb = hitBox.GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            animator.SetBool("Radius", true);
+        }
+    }
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        Rigidbody2D rb = other.GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            animator.SetBool("Radius", false);
+        }
+    }
+
+        public void LookAtPlayer()
     {
         Vector3 flipped = transform.localScale;
         flipped.z *= -1f;
@@ -118,7 +135,6 @@ public class Enemy2 : MonoBehaviour
 
     void Die()
     {
-        Debug.Log("Enemy died!");
         canvas.enabled = false;
 
         //Die animation
