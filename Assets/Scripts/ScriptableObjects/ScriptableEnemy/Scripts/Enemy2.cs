@@ -13,8 +13,11 @@ public class Enemy2 : MonoBehaviour
     private AnimatorController animController;
     public Transform player2;
 
-    int currentHeatlh;
-    
+    public int maxHealth = 100;
+    public int currentHealth;
+    public HealthBar healthBar;
+    public Canvas canvas;
+
     private bool isFlipped = false;
 
     // Enemy Attack Part
@@ -28,6 +31,9 @@ public class Enemy2 : MonoBehaviour
     
     void Start()
     {
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
+
         SetEnemy();
         SetAttack();
         //SetSprites();
@@ -51,7 +57,7 @@ public class Enemy2 : MonoBehaviour
         GetComponent<Animator>().runtimeAnimatorController = animController;
         animator = GetComponent<Animator>();
         
-        currentHeatlh = scriptEnemy.maxHealth;
+        currentHealth = scriptEnemy.maxHealth;
         
         isFlipped = scriptEnemy.isFlipped;
     }
@@ -98,12 +104,13 @@ public class Enemy2 : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        currentHeatlh -= damage;
+        currentHealth -= damage;
+        healthBar.SetHealth(currentHealth);
 
         //Play hurt aniamtion
         animator.SetTrigger("Hurt");
 
-        if (currentHeatlh <= 0)
+        if (currentHealth <= 0)
         {
             Die();
         }
@@ -112,6 +119,7 @@ public class Enemy2 : MonoBehaviour
     void Die()
     {
         Debug.Log("Enemy died!");
+        canvas.enabled = false;
 
         //Die animation
         animator.SetBool("IsDead", true);

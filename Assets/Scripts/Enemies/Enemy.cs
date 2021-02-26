@@ -7,14 +7,16 @@ public class Enemy : MonoBehaviour
     public Animator animator;
 
     public int maxHealth = 100;
-    int currentHeatlh;
+    public int currentHealth;
+    public HealthBar healthBar;
 
     public Transform player;
     public bool isFlipped = false;
 
     void Start()
     {
-        currentHeatlh = maxHealth;
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
     }
 
     public void LookAtPlayer()
@@ -38,12 +40,13 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        currentHeatlh -= damage;
+        currentHealth -= damage;
+        healthBar.SetHealth(currentHealth);
 
         //Play hurt aniamtion
         animator.SetTrigger("Hurt");
 
-        if (currentHeatlh <= 0)
+        if (currentHealth <= 0)
         {
             Die();
         }
