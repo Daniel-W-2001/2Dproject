@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using ScriptableObjects.ScriptableEnemy.Scripts;
 using UnityEngine;
 
 public class RogueWalk : StateMachineBehaviour

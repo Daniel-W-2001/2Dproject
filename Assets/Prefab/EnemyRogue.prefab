@@ -627,7 +627,23 @@ MonoBehaviour:
   currentHealth: 0
   healthBar: {fileID: 122463180041296890}
   canvas: {fileID: 122463181350326730}
-  bodyParts: []
+  enemyHead_object: {fileID: 4116174404899473147}
+  enemyFace_object: {fileID: 4116174407484074295}
+  enemyHood_object: {fileID: 4116174407345790753}
+  enemyWeaponL_object: {fileID: 4116174406354927877}
+  enemyWristL_object: {fileID: 4116174404820989639}
+  enemyElbowL_object: {fileID: 4116174405679176307}
+  enemyShoulderL_object: {fileID: 4116174408652603295}
+  enemyWeaponR_object: {fileID: 4116174406857582143}
+  enemyWristR_object: {fileID: 4116174408522865901}
+  enemyElbowR_object: {fileID: 4116174406151655163}
+  enemyShoulderR_object: {fileID: 4116174407918463959}
+  enemyTorso_object: {fileID: 4116174404918977939}
+  enemyBootL_object: {fileID: 4116174406045321595}
+  enemyLegL_object: {fileID: 4116174406741551699}
+  enemyBootR_object: {fileID: 4116174408428954413}
+  enemyLegR_object: {fileID: 4116174407409984917}
+  enemyPelvis_object: {fileID: 4116174408684782617}
 --- !u!1 &4116174404820989639
 GameObject:
   m_ObjectHideFlags: 0

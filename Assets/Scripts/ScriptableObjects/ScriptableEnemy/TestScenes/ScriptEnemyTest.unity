@@ -189,6 +189,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 551268086203238738, guid: 6938fc71ad5c337428bc7c3cc735755e, type: 3}
   m_PrefabInstance: {fileID: 51518708}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &82352258 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4116174405679176307, guid: b36f32e3fcca5f3428b181cf33508bda, type: 3}
+  m_PrefabInstance: {fileID: 530827270}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &530827270
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -256,6 +261,38 @@ PrefabInstance:
       propertyPath: player2
       value: 
       objectReference: {fileID: 51518709}
+    - target: {fileID: 6685746636514013032, guid: b36f32e3fcca5f3428b181cf33508bda, type: 3}
+      propertyPath: scriptEnemy
+      value: 
+      objectReference: {fileID: 11400000, guid: 11f7d9f2247a898418ea32f9e6d14f4d, type: 2}
+    - target: {fileID: 6685746636514013032, guid: b36f32e3fcca5f3428b181cf33508bda, type: 3}
+      propertyPath: enemyFace_object
+      value: 
+      objectReference: {fileID: 826768002}
+    - target: {fileID: 6685746636514013032, guid: b36f32e3fcca5f3428b181cf33508bda, type: 3}
+      propertyPath: enemyHead_object
+      value: 
+      objectReference: {fileID: 1369996582}
+    - target: {fileID: 6685746636514013032, guid: b36f32e3fcca5f3428b181cf33508bda, type: 3}
+      propertyPath: enemyHood_object
+      value: 
+      objectReference: {fileID: 1136175491}
+    - target: {fileID: 6685746636514013032, guid: b36f32e3fcca5f3428b181cf33508bda, type: 3}
+      propertyPath: enemyElbowL_object
+      value: 
+      objectReference: {fileID: 82352258}
+    - target: {fileID: 6685746636514013032, guid: b36f32e3fcca5f3428b181cf33508bda, type: 3}
+      propertyPath: enemyWristL_object
+      value: 
+      objectReference: {fileID: 771578134}
+    - target: {fileID: 6685746636514013032, guid: b36f32e3fcca5f3428b181cf33508bda, type: 3}
+      propertyPath: enemyWeaponL_object
+      value: 
+      objectReference: {fileID: 1039506385}
+    - target: {fileID: 6685746636514013032, guid: b36f32e3fcca5f3428b181cf33508bda, type: 3}
+      propertyPath: enemyShoulderL_object
+      value: 
+      objectReference: {fileID: 1175725347}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b36f32e3fcca5f3428b181cf33508bda, type: 3}
 --- !u!1 &701186769
@@ -1173,6 +1210,31 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
+--- !u!1 &771578134 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4116174404820989639, guid: b36f32e3fcca5f3428b181cf33508bda, type: 3}
+  m_PrefabInstance: {fileID: 530827270}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &826768002 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4116174407484074295, guid: b36f32e3fcca5f3428b181cf33508bda, type: 3}
+  m_PrefabInstance: {fileID: 530827270}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1039506385 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4116174406354927877, guid: b36f32e3fcca5f3428b181cf33508bda, type: 3}
+  m_PrefabInstance: {fileID: 530827270}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1136175491 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4116174407345790753, guid: b36f32e3fcca5f3428b181cf33508bda, type: 3}
+  m_PrefabInstance: {fileID: 530827270}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1175725347 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4116174408652603295, guid: b36f32e3fcca5f3428b181cf33508bda, type: 3}
+  m_PrefabInstance: {fileID: 530827270}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1317257758
 GameObject:
   m_ObjectHideFlags: 0
@@ -1293,6 +1355,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c30753f69b290d64e98640158f268eac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1369996582 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4116174404899473147, guid: b36f32e3fcca5f3428b181cf33508bda, type: 3}
+  m_PrefabInstance: {fileID: 530827270}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1488120020
 GameObject:
   m_ObjectHideFlags: 0

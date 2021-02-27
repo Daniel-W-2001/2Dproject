@@ -10,6 +10,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0049532E-C432-485C-A342-60937DA7A054/2e/d225629d/Sprite.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -26,6 +29,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerCombat.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/Dialogue/Scripts/TextLoader.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/ScriptableEnemy/Scripts/SpriteScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/ScriptableEnemy/Scripts/EnemySprites.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/ScriptableEnemy/Scripts/EnemyObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/ScriptableEnemy/Scripts/Enemy2.cs" />
       </list>
@@ -72,7 +76,7 @@
       <option name="presentableId" value="Default" />
       <updated>1614278751770</updated>
       <workItem from="1614278764157" duration="8395000" />
-      <workItem from="1614446489620" duration="410000" />
+      <workItem from="1614446489620" duration="3262000" />
     </task>
     <servers />
   </component>
