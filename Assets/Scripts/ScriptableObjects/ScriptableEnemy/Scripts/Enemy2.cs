@@ -6,6 +6,7 @@ namespace ScriptableObjects.ScriptableEnemy.Scripts
     public class Enemy2 : MonoBehaviour
     {
         private GameObject thisGameObject;
+
         // Enemy Part
         public EnemyObject scriptEnemy;
         private Animator animator;
@@ -43,6 +44,7 @@ namespace ScriptableObjects.ScriptableEnemy.Scripts
         private Sprite enemyBootR;
         private Sprite enemyLegR;
         private Sprite enemyPelvis;
+
         
         public GameObject enemyHead_object;
         public GameObject enemyFace_object;
@@ -61,9 +63,9 @@ namespace ScriptableObjects.ScriptableEnemy.Scripts
         public GameObject enemyBootR_object;
         public GameObject enemyLegR_object;
         public GameObject enemyPelvis_object;
-        
+    
 
-        void Start()
+    void Start()
         {
             SetEnemy();
             SetAttack();
@@ -110,7 +112,7 @@ namespace ScriptableObjects.ScriptableEnemy.Scripts
             enemyShoulderR_object.GetComponent<SpriteRenderer>().sprite = enemyShoulderR;
             enemyTorso_object.GetComponent<SpriteRenderer>().sprite = enemyTorso;
             enemyBootL_object.GetComponent<SpriteRenderer>().sprite = enemyBootL;
-            enemyBootL_object.GetComponent<SpriteRenderer>().sprite = enemyLegL;
+            enemyLegL_object.GetComponent<SpriteRenderer>().sprite = enemyLegL;
             enemyBootR_object.GetComponent<SpriteRenderer>().sprite = enemyBootR;
             enemyLegR_object.GetComponent<SpriteRenderer>().sprite = enemyLegR;
             enemyPelvis_object.GetComponent<SpriteRenderer>().sprite = enemyPelvis;
@@ -158,6 +160,11 @@ namespace ScriptableObjects.ScriptableEnemy.Scripts
             if (rb != null)
             {
                 animator.SetBool("Radius", true);
+            }
+
+            if (CompareTag(""))
+            {
+                
             }
         }
         private void OnTriggerExit2D(Collider2D other)
