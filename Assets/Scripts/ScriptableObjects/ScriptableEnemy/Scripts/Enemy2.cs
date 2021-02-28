@@ -1,3 +1,4 @@
+using System;
 using UnityEditor.Animations;
 using UnityEngine;
 
@@ -12,6 +13,8 @@ namespace ScriptableObjects.ScriptableEnemy.Scripts
         private Animator animator;
         private AnimatorController animController;
         public Transform player2;
+
+        private BoxCollider2D boxCollider2D;
 
         public int maxHealth = 100;
         public int currentHealth;
@@ -120,6 +123,7 @@ namespace ScriptableObjects.ScriptableEnemy.Scripts
         
         void SetEnemy()
         {
+            boxCollider2D = GetComponent<BoxCollider2D>();
             // Enemy part
             currentHealth = maxHealth;
             healthBar.SetMaxHealth(maxHealth);
@@ -162,10 +166,7 @@ namespace ScriptableObjects.ScriptableEnemy.Scripts
                 animator.SetBool("Radius", true);
             }
 
-            if (CompareTag(""))
-            {
-                
-            }
+            
         }
         private void OnTriggerExit2D(Collider2D other)
         {
@@ -173,6 +174,22 @@ namespace ScriptableObjects.ScriptableEnemy.Scripts
             if (rb != null)
             {
                 animator.SetBool("Radius", false);
+            }
+        }
+
+        private void OnTriggerEnter2D(Collider2D hitBox)
+        {
+            if (hitBox.CompareTag("TilemapHitbox") == boxCollider2D.isTrigger) 
+            {
+                Debug.Log("Blocked");
+                if (isFlipped)
+                {
+                    gameObject.transform.position = new Vector3(transform.position.x - .1f, transform.position.y);
+                }
+                else
+                {
+                    gameObject.transform.position = new Vector3(transform.position.x + .1f, transform.position.y);
+                }
             }
         }
 
