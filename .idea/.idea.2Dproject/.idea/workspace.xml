@@ -26,10 +26,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/ScriptableEnemy/Scripts/EnemySprites.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/ScriptableEnemy/Scripts/EnemyObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Enemy.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Door.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/ScriptableEnemy/Scripts/Enemy2.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerCombat.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/ScriptableEnemy/Scripts/RogueWalk2.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Door.cs" />
       </list>
     </option>
   </component>
@@ -75,7 +75,7 @@
       <updated>1614278751770</updated>
       <workItem from="1614278764157" duration="8395000" />
       <workItem from="1614446489620" duration="5256000" />
-      <workItem from="1614812751003" duration="267000" />
+      <workItem from="1614812751003" duration="2169000" />
     </task>
     <servers />
   </component>
