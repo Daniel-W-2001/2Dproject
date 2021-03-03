@@ -7,7 +7,7 @@ public class Door : MonoBehaviour
     bool radius;
     public GameObject textPopup;
     MeshRenderer text;
-    //public AudioSource doorSound;
+    public AudioSource doorSound;
     public GameObject player;
     public GameObject door2;
 
@@ -40,7 +40,7 @@ public class Door : MonoBehaviour
         if ((radius == true) && Input.GetKeyDown(KeyCode.S))
         {
             player.transform.position = door2.transform.position;
-            //doorSound.Play();
+            doorSound.Play();
         }
     }
 }

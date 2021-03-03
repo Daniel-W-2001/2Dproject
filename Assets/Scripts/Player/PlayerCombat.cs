@@ -20,6 +20,8 @@ public class PlayerCombat : MonoBehaviour
     public int currentHealth;
     public HealthBar healthBar;
 
+    public AudioSource swordSwing;
+
     void Start()
     {
         currentHealth = maxHealth;
@@ -47,6 +49,7 @@ public class PlayerCombat : MonoBehaviour
     {
         //Play attack animation
         animator.SetTrigger("Attack");
+        swordSwing.Play();
 
         //Detect enemies in range
         Collider2D [] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);

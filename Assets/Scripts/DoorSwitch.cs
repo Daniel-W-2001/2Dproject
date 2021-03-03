@@ -13,7 +13,7 @@ public class DoorSwitch : MonoBehaviour
     public GameObject doorClosed;
     bool open = false;
 
-    //public leverSource switchSound;
+    public AudioSource leverSound;
 
     private void Start()
     {
@@ -48,7 +48,7 @@ public class DoorSwitch : MonoBehaviour
             leverOff.SetActive(false);
             doorOpen.SetActive(true);
             doorClosed.SetActive(false);
-            //leverSound.Play();
+            leverSound.Play();
             Invoke("Open", 1);
         }
 
@@ -58,7 +58,7 @@ public class DoorSwitch : MonoBehaviour
             leverOff.SetActive(true);
             doorOpen.SetActive(false);
             doorClosed.SetActive(true);
-            //leverSound.Play();
+            leverSound.Play();
             Invoke("Closed", 1);
         }
     }
