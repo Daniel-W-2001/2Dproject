@@ -46,6 +46,7 @@ public class Chest : MonoBehaviour
             chestOpen.SetActive(true);
             chestClosed.SetActive(false);
             chestSound.Play();
+            GemCount.gemCount += 1;
             open = true;
             col.enabled = false;
         }
