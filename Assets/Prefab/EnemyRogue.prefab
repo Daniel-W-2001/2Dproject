@@ -621,7 +621,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a61b96bcb2f430459f085a8da14a108, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scriptEnemy: {fileID: 0}
+  scriptEnemy: {fileID: 11400000, guid: 05b3668c361fb3b4e9e2a372285681ea, type: 2}
   player2: {fileID: 551268086203238738, guid: 6938fc71ad5c337428bc7c3cc735755e, type: 3}
   maxHealth: 100
   currentHealth: 0

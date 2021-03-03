@@ -249,7 +249,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 85944715}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03926738e5837ca49820aca1fad8c390, type: 3}
+  m_Script: {fileID: 11500000, guid: 979bc48ff788b2949afd5fee7aa09208, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   textPopup: {fileID: 85944715}
@@ -485,7 +485,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 105591297}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03926738e5837ca49820aca1fad8c390, type: 3}
+  m_Script: {fileID: 11500000, guid: 979bc48ff788b2949afd5fee7aa09208, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   textPopup: {fileID: 105591297}
@@ -3821,7 +3821,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 933049125}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03926738e5837ca49820aca1fad8c390, type: 3}
+  m_Script: {fileID: 11500000, guid: 979bc48ff788b2949afd5fee7aa09208, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   textPopup: {fileID: 933049125}
@@ -6767,7 +6767,7 @@ PrefabInstance:
     - target: {fileID: 6685746636514013032, guid: b36f32e3fcca5f3428b181cf33508bda, type: 3}
       propertyPath: scriptEnemy
       value: 
-      objectReference: {fileID: 11400000, guid: 8157d362b9346de41b9d6597be027fe2, type: 2}
+      objectReference: {fileID: 11400000, guid: 05b3668c361fb3b4e9e2a372285681ea, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b36f32e3fcca5f3428b181cf33508bda, type: 3}
 --- !u!1 &1216855393
@@ -6800,7 +6800,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1216855393}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03926738e5837ca49820aca1fad8c390, type: 3}
+  m_Script: {fileID: 11500000, guid: 979bc48ff788b2949afd5fee7aa09208, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   textPopup: {fileID: 1216855393}
@@ -7133,7 +7133,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1323840764}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03926738e5837ca49820aca1fad8c390, type: 3}
+  m_Script: {fileID: 11500000, guid: 979bc48ff788b2949afd5fee7aa09208, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   textPopup: {fileID: 1323840764}
@@ -8746,13 +8746,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 2115606001}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03926738e5837ca49820aca1fad8c390, type: 3}
+  m_Script: {fileID: 11500000, guid: 979bc48ff788b2949afd5fee7aa09208, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   textPopup: {fileID: 2115606001}
   doorSound: {fileID: 2115606002}
   player: {fileID: 769606499}
-  door2: {fileID: 7282890216584102184}
+  door2: {fileID: 933049125}
 --- !u!102 &2115606004
 TextMesh:
   serializedVersion: 3
@@ -8926,7 +8926,7 @@ PrefabInstance:
     - target: {fileID: 6685746636514013032, guid: b36f32e3fcca5f3428b181cf33508bda, type: 3}
       propertyPath: scriptEnemy
       value: 
-      objectReference: {fileID: 11400000, guid: 8157d362b9346de41b9d6597be027fe2, type: 2}
+      objectReference: {fileID: 11400000, guid: 05b3668c361fb3b4e9e2a372285681ea, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b36f32e3fcca5f3428b181cf33508bda, type: 3}
 --- !u!1001 &551268086837676597
