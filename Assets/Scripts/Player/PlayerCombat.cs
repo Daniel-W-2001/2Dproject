@@ -7,6 +7,7 @@ public class PlayerCombat : MonoBehaviour
 {
     public Animator animator;
 
+    private Rigidbody2D rb;
     public Transform attackPoint;
     public float attackRange = 0.5f;
     public LayerMask enemyLayers;
@@ -24,6 +25,7 @@ public class PlayerCombat : MonoBehaviour
 
     void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
     }
@@ -32,7 +34,7 @@ public class PlayerCombat : MonoBehaviour
     {
         if (Time.time >= nextAttackTime)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space) && Mathf.Abs(rb.velocity.y) < 0.001f)
             {
                 Attack();
                 nextAttackTime = Time.time + 1f / attackRate;
