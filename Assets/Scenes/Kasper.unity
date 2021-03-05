@@ -3132,7 +3132,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 446, y: 16.516}
+  m_AnchoredPosition: {x: 310, y: 16.516}
   m_SizeDelta: {x: 1122.289, y: 209.031}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &724920782
@@ -6424,6 +6424,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyRogue (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6685746636514013032, guid: b36f32e3fcca5f3428b181cf33508bda, type: 3}
+      propertyPath: player2
+      value: 
+      objectReference: {fileID: 769606503}
     - target: {fileID: 6685746636514013032, guid: b36f32e3fcca5f3428b181cf33508bda, type: 3}
       propertyPath: scriptEnemy
       value: 
