@@ -11,6 +11,9 @@ public class Chest : MonoBehaviour
     public GameObject chestClosed;
     bool open = false;
     public Collider2D col;
+    public GameObject chestEffect;
+    public GameObject effectPoint;
+    private bool hasPlayed = false;
 
     public AudioSource chestSound;
 
@@ -49,6 +52,12 @@ public class Chest : MonoBehaviour
             GemCount.gemCount += 1;
             open = true;
             col.enabled = false;
+            if (!hasPlayed)
+            {
+                var effect = (GameObject)Instantiate(chestEffect, effectPoint.transform.position, Quaternion.identity);
+                Destroy(effect, 1);
+                hasPlayed = true;
+            }
         }
     }
 }
