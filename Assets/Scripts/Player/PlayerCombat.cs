@@ -22,6 +22,7 @@ public class PlayerCombat : MonoBehaviour
     public HealthBar healthBar;
 
     public AudioSource swordSwing;
+    public GameObject respawnPoint;
 
     void Start()
     {
@@ -41,9 +42,10 @@ public class PlayerCombat : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.K))
+        if (currentHealth <= 0)
         {
-            TakeDamage(20);
+            animator.SetBool("IsDead", true);
+            Invoke("Die", 1);
         }
     }
 
@@ -67,6 +69,14 @@ public class PlayerCombat : MonoBehaviour
     {
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
+    }
+
+    void Die()
+    {
+        animator.SetBool("IsDead", false);
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
+        transform.position = respawnPoint.transform.position;
     }
 
     private void OnDrawGizmosSelected()
