@@ -26,10 +26,10 @@ public class FireballScript : MonoBehaviour
             Destroy(boom, 0.5f);
         }
 
-        Crate crate = hitInfo.GetComponent<Crate>();
-        if (crate != null)
+        Barrel barrel = hitInfo.GetComponent<Barrel>();
+        if (barrel != null)
         {
-            crate.Explode();
+            barrel.Explode();
             Destroy(gameObject);
         }
     }

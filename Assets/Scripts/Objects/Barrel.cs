@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Crate : MonoBehaviour
+public class Barrel : MonoBehaviour
 {
     public GameObject explosion;
 
