@@ -25,5 +25,12 @@ public class FireballScript : MonoBehaviour
             Destroy(gameObject);
             Destroy(boom, 0.5f);
         }
+
+        Crate crate = hitInfo.GetComponent<Crate>();
+        if (crate != null)
+        {
+            crate.Explode();
+            Destroy(gameObject);
+        }
     }
 }
