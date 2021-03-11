@@ -20,6 +20,8 @@ public class PlayerCombat : MonoBehaviour
     public int maxHealth = 100;
     public int currentHealth;
     public HealthBar healthBar;
+    public GameObject potionPickup;
+    public AudioSource healSound;
 
     public AudioSource swordSwing;
     public GameObject respawnPoint;
@@ -69,6 +71,15 @@ public class PlayerCombat : MonoBehaviour
     {
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
+    }
+
+    public void Potion()
+    {
+        var heal = Instantiate(potionPickup, transform.position, transform.rotation);
+        healSound.Play();
+        Destroy(heal, 2f);
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
     }
 
     void Die()
