@@ -1,5 +1,4 @@
 using System;
-using UnityEditor.Animations;
 using UnityEngine;
 
 namespace ScriptableObjects.ScriptableEnemy.Scripts
@@ -11,7 +10,7 @@ namespace ScriptableObjects.ScriptableEnemy.Scripts
         // Enemy Part
         public EnemyObject scriptEnemy;
         private Animator animator;
-        private AnimatorController animController;
+        //private AnimatorController animController;
         public Transform player2;
 
         private BoxCollider2D boxCollider2D;
@@ -128,8 +127,8 @@ namespace ScriptableObjects.ScriptableEnemy.Scripts
             currentHealth = maxHealth;
             healthBar.SetMaxHealth(maxHealth);
             
-            animController = scriptEnemy.animController;
-            GetComponent<Animator>().runtimeAnimatorController = animController;
+            //animController = scriptEnemy.animController;
+            //GetComponent<Animator>().runtimeAnimatorController = animController;
             animator = GetComponent<Animator>();
         
             currentHealth = scriptEnemy.maxHealth;

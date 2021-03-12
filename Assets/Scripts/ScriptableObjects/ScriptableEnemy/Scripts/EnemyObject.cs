@@ -1,4 +1,3 @@
-using UnityEditor.Animations;
 using UnityEngine;
 
 namespace ScriptableObjects.ScriptableEnemy.Scripts
@@ -7,7 +6,7 @@ namespace ScriptableObjects.ScriptableEnemy.Scripts
     public class EnemyObject : ScriptableObject
     {
         // Enemy
-        public AnimatorController animController;
+        //public AnimatorController animController;
         public int maxHealth = 100;
         public bool isFlipped = false;
 

@@ -622,6 +622,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scriptEnemy: {fileID: 11400000, guid: 05b3668c361fb3b4e9e2a372285681ea, type: 2}
+  animController: {fileID: 0}
   player2: {fileID: 0}
   maxHealth: 100
   currentHealth: 0

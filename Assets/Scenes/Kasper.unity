@@ -20928,6 +20928,10 @@ PrefabInstance:
       propertyPath: scriptEnemy
       value: 
       objectReference: {fileID: 11400000, guid: 05b3668c361fb3b4e9e2a372285681ea, type: 2}
+    - target: {fileID: 6685746636514013032, guid: b36f32e3fcca5f3428b181cf33508bda, type: 3}
+      propertyPath: animController
+      value: 
+      objectReference: {fileID: 9100000, guid: 3f91ccc83710e0140844bbc6f2ff40a4, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b36f32e3fcca5f3428b181cf33508bda, type: 3}
 --- !u!4 &3594612182578566201
