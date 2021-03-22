@@ -30,6 +30,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerCombat.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/ScriptableEnemy/Scripts/RogueWalk2.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Door.cs" />
+        <option value="$PROJECT_DIR$/Assets/PlayMusic.cs" />
+        <option value="$PROJECT_DIR$/Assets/TileCrumble.cs" />
       </list>
     </option>
   </component>
@@ -76,6 +78,7 @@
       <workItem from="1614278764157" duration="8395000" />
       <workItem from="1614446489620" duration="5256000" />
       <workItem from="1614812751003" duration="2169000" />
+      <workItem from="1616417560924" duration="2805000" />
     </task>
     <servers />
   </component>
@@ -92,5 +95,9 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="694" y="342" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1080/-1680.10.1680.1050@0.0.1920.1080" timestamp="1614286844955" />
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1616418927372">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/-1680.10.1680.1050@0.0.1920.1080" timestamp="1616418927372" />
   </component>
 </project>
