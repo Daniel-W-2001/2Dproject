@@ -37,7 +37,7 @@ public class Door : MonoBehaviour
     }
     private void Update()
     {
-        if ((radius == true) && Input.GetKeyDown(KeyCode.W))
+        if ((radius == true) && Input.GetKeyDown(KeyCode.S))
         {
             player.transform.position = door2.transform.position;
             //doorSound.Play();
