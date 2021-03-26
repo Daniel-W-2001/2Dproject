@@ -6,7 +6,7 @@ using UnityEngine;
 public class RogueWalk : StateMachineBehaviour
 {
     public float speed = 2.5f;
-    public float attackRange = 3f;
+    public float attackRange = 2f;
 
     Transform player;
     Rigidbody2D rb;
