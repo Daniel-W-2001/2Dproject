@@ -54,16 +54,11 @@ public class Witch : MonoBehaviour
 
     void Update()
     {
-        if ((Vector2.Distance(transform.position, player.position) <= attackRange) && (Time.time >= nextAttackTime))
+        if ((Vector2.Distance(transform.position, player.position) <= attackRange) && (Time.time >= nextAttackTime) && (currentHealth > 0))
         {
             animator.SetTrigger("Attack");
             Shoot();
             nextAttackTime = Time.time + 1f / attackRate;
-        }
-
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            TakeDamage(20);
         }
     }
 

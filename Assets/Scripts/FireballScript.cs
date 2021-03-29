@@ -26,6 +26,15 @@ public class FireballScript : MonoBehaviour
             Destroy(boom, 0.5f);
         }
 
+        Witch witch = hitInfo.GetComponent<Witch>();
+        if (witch != null)
+        {
+            witch.TakeDamage(damage);
+            var boom = Instantiate(explosion, transform.position, transform.rotation);
+            Destroy(gameObject);
+            Destroy(boom, 0.5f);
+        }
+
         Barrel barrel = hitInfo.GetComponent<Barrel>();
         if (barrel != null)
         {
