@@ -26,8 +26,7 @@ public class Chest : MonoBehaviour
     }
     void OnTriggerStay2D(Collider2D hitBox)
     {
-        Rigidbody2D rb = hitBox.GetComponent<Rigidbody2D>();
-        if (rb != null)
+        if (hitBox.tag == "Player")
         {
             radius = true;
             text.enabled = true;
@@ -35,8 +34,7 @@ public class Chest : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D other)
     {
-        Rigidbody2D rb = other.GetComponent<Rigidbody2D>();
-        if (rb != null)
+        if (other.tag == "Player")
         {
             radius = false;
             text.enabled = false;

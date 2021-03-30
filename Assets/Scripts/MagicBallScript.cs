@@ -22,7 +22,7 @@ public class MagicBallScript : MonoBehaviour
             enemy.TakeDamage(damage);
             var boom = Instantiate(explosion, transform.position, transform.rotation);
             Destroy(gameObject);
-            Destroy(boom, 0.5f);
+            Destroy(boom, 1f);
         }
     }
 }
