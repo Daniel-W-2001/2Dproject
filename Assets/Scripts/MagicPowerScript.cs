@@ -5,7 +5,7 @@ using UnityEngine;
 public class MagicPowerScript : MonoBehaviour
 {
     GameObject player;
-    float speed = 1000f;
+    float speed = 500f;
     float RotateSpeed = 3000f;
     public int damage = 40;
     public Rigidbody2D rb;
