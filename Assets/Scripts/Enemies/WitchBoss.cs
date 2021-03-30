@@ -2,23 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Witch : MonoBehaviour
+public class WitchBoss : MonoBehaviour
 {
     public Transform player;
     public bool isFlipped = false;
 
-    float attackRange = 10f;
+    float attackRange = 20f;
     public Animator animator;
 
+    float stage2AttackRate = 0.3f;
     public float attackRate = 0.8f;
     float nextAttackTime = 0f;
 
     public Transform firePoint;
     public GameObject spell;
+    public GameObject powerSpell;
     GameObject instantiatedObject;
     //public AudioSource spellSound;
 
-    public int maxHealth = 100;
+    public int maxHealth = 500;
     public int currentHealth;
     public HealthBar healthBar;
     public Canvas canvas;
@@ -27,13 +29,22 @@ public class Witch : MonoBehaviour
     public GameObject effectPoint;
     private bool hasPlayed = false;
 
+    public GameObject point1;
+    public GameObject point2;
+    public GameObject point3;
+    bool point1done = false;
+    bool point2done = false;
+    bool point3done = false;
+
+    public GameObject potion;
+
     private void Start()
     {
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
     }
 
-    public void LookAtPlayer()
+    public void BossLookAtPlayer()
     {
         Vector3 flipped = transform.localScale;
         flipped.z *= -1f;
@@ -54,11 +65,45 @@ public class Witch : MonoBehaviour
 
     void Update()
     {
-        if ((Vector2.Distance(transform.position, player.position) <= attackRange) && (Time.time >= nextAttackTime) && (currentHealth > 0))
+        if ((Vector2.Distance(transform.position, player.position) <= attackRange) && (Time.time >= nextAttackTime) && (currentHealth > 200))
         {
             animator.SetTrigger("Attack");
             Shoot();
             nextAttackTime = Time.time + 1f / attackRate;
+        }
+
+        if (currentHealth <= 400 && (point1done == false))
+        {
+            point1done = true;
+            instantiatedObject = Instantiate(potion, transform.position, Quaternion.identity);
+            var effect = (GameObject)Instantiate(deathEffect, effectPoint.transform.position, Quaternion.identity);
+            Destroy(effect, 2);
+            transform.position = point1.transform.position;
+        }
+
+        if (currentHealth <= 300 && (point2done == false))
+        {
+            point2done = true;
+            instantiatedObject = Instantiate(potion, transform.position, Quaternion.identity);
+            var effect = (GameObject)Instantiate(deathEffect, effectPoint.transform.position, Quaternion.identity);
+            Destroy(effect, 2);
+            transform.position = point2.transform.position;
+        }
+
+        if (currentHealth <= 200 && (point3done == false))
+        {
+            point3done = true;
+            instantiatedObject = Instantiate(potion, transform.position, Quaternion.identity);
+            var effect = (GameObject)Instantiate(deathEffect, effectPoint.transform.position, Quaternion.identity);
+            Destroy(effect, 2);
+            transform.position = point3.transform.position;
+        }
+
+        if ((Vector2.Distance(transform.position, player.position) <= attackRange) && (Time.time >= nextAttackTime) && (currentHealth > 0) && (point3done == true))
+        {
+            animator.SetTrigger("Attack");
+            PowerShoot();
+            nextAttackTime = Time.time + 1f / stage2AttackRate;
         }
     }
 
@@ -69,6 +114,12 @@ public class Witch : MonoBehaviour
         //spellSound.Play();
     }
 
+    void PowerShoot()
+    {
+        instantiatedObject = Instantiate(powerSpell, firePoint.position, firePoint.rotation);
+        Destroy(instantiatedObject, 10f);
+        //spellSound.Play();
+    }
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;

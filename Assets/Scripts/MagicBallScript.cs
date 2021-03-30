@@ -5,7 +5,7 @@ using UnityEngine;
 public class MagicBallScript : MonoBehaviour
 {
     public float speed = 10f;
-    public int damage = 40;
+    public int damage = 25;
     public Rigidbody2D rb;
     public GameObject explosion;
 
