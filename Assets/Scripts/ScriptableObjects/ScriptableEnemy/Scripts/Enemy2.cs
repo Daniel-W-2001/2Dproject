@@ -1,149 +1,242 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.Animations;
+using System;
 using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.UIElements;
 
-public class Enemy2 : MonoBehaviour
+namespace ScriptableObjects.ScriptableEnemy.Scripts
 {
-    // Enemy Part
-    public EnemyObject scriptEnemy;
-    private Animator animator;
-    private AnimatorController animController;
-    public Transform player2;
+    public class Enemy2 : MonoBehaviour
+    {
+        private GameObject thisGameObject;
 
-    public int maxHealth = 100;
-    public int currentHealth;
-    public HealthBar healthBar;
-    public Canvas canvas;
+        // Enemy Part
+        public EnemyObject scriptEnemy;
+        private Animator animator;
+        //private AnimatorController animController;
+        public Transform player2;
 
-    private bool isFlipped = false;
+        private BoxCollider2D boxCollider2D;
 
-    // Enemy Attack Part
-    private Vector3 attackOffset;
-    private float attackRange;
-    private LayerMask attackMask;
-    private int attackDamage;
+        public int maxHealth = 100;
+        public int currentHealth;
+        public HealthBar healthBar;
+        public Canvas canvas;
+
+        private bool isFlipped = false;
+
+        // Enemy Attack Part
+        private Vector3 attackOffset;
+        private float attackRange;
+        private LayerMask attackMask;
+        private int attackDamage;
+
+        // EnemyLooks
+        private Sprite enemyHead;
+        private Sprite enemyFace;
+        private Sprite enemyHood;
+        private Sprite enemyWeaponL;
+        private Sprite enemyWristL;
+        private Sprite enemyElbowL;
+        private Sprite enemyShoulderL;
+        private Sprite enemyWeaponR;
+        private Sprite enemyWristR;
+        private Sprite enemyElbowR;
+        private Sprite enemyShoulderR;
+        private Sprite enemyTorso;
+        private Sprite enemyBootL;
+        private Sprite enemyLegL;
+        private Sprite enemyBootR;
+        private Sprite enemyLegR;
+        private Sprite enemyPelvis;
+
+        
+        public GameObject enemyHead_object;
+        public GameObject enemyFace_object;
+        public GameObject enemyHood_object;
+        public GameObject enemyWeaponL_object;
+        public GameObject enemyWristL_object;
+        public GameObject enemyElbowL_object;
+        public GameObject enemyShoulderL_object;
+        public GameObject enemyWeaponR_object;
+        public GameObject enemyWristR_object;
+        public GameObject enemyElbowR_object;
+        public GameObject enemyShoulderR_object;
+        public GameObject enemyTorso_object;
+        public GameObject enemyBootL_object;
+        public GameObject enemyLegL_object;
+        public GameObject enemyBootR_object;
+        public GameObject enemyLegR_object;
+        public GameObject enemyPelvis_object;
     
-    // EnemyLooks
-    public Sprite[] bodyParts;
-    
+
     void Start()
-    {
-        currentHealth = maxHealth;
-        healthBar.SetMaxHealth(maxHealth);
+        {
+            SetEnemy();
+            SetAttack();
+            // It's Hardcoding time!
+            SetObjects();
+            SetSprites();
+        }
 
-        SetEnemy();
-        SetAttack();
-        //SetSprites();
-    }
-
-    //WIP
-    //void SetSprites() 
-    //{
-    //    bodyParts = FindObjectOfType<EnemyObject>().sprites;
-    //    
-    //
-    //    for (int i = 0; i < bodyParts.Length; i++)
-    //    {
-    //        
-    //    }
-    //}
-    void SetEnemy()
-    {
-        // Enemy part
-        animController = scriptEnemy.animController;
-        GetComponent<Animator>().runtimeAnimatorController = animController;
-        animator = GetComponent<Animator>();
+        void SetObjects()
+        {
+            // Could probably get a loop to do this but this should work just fiiinnneee (Also i didn't find out how)
+            enemyHead = scriptEnemy.enemyHead;
+            enemyFace = scriptEnemy.enemyFace;
+            enemyHood = scriptEnemy.enemyHood;
+            enemyWeaponL = scriptEnemy.enemyWeaponL;
+            enemyWristL = scriptEnemy.enemyWristL;
+            enemyElbowL = scriptEnemy.enemyElbowL;
+            enemyShoulderL = scriptEnemy.enemyShoulderL;
+            enemyWeaponR = scriptEnemy.enemyWeaponR;
+            enemyWristR = scriptEnemy.enemyWristR;
+            enemyElbowR = scriptEnemy.enemyElbowR;
+            enemyShoulderR = scriptEnemy.enemyShoulderR;
+            enemyTorso = scriptEnemy.enemyTorso;
+            enemyBootL = scriptEnemy.enemyBootL;
+            enemyLegL = scriptEnemy.enemyLegL;
+            enemyBootR = scriptEnemy.enemyBootR;
+            enemyLegR = scriptEnemy.enemyLegR;
+            enemyPelvis = scriptEnemy.enemyPelvis;
+            SetSprites();
+        }
+        void SetSprites() 
+        {
+            // Could probably get a loop to do this but this should work just fiiinnneee (Also i didn't find out how)
+            enemyHead_object.GetComponent<SpriteRenderer>().sprite = enemyHead;
+            enemyFace_object.GetComponent<SpriteRenderer>().sprite = enemyFace;
+            enemyHood_object.GetComponent<SpriteRenderer>().sprite = enemyHood;
+            enemyWeaponL_object.GetComponent<SpriteRenderer>().sprite = enemyWeaponL;
+            enemyWristL_object.GetComponent<SpriteRenderer>().sprite = enemyWristL;
+            enemyElbowL_object.GetComponent<SpriteRenderer>().sprite = enemyElbowL;
+            enemyShoulderL_object.GetComponent<SpriteRenderer>().sprite = enemyShoulderL;
+            enemyWeaponR_object.GetComponent<SpriteRenderer>().sprite = enemyWeaponR;
+            enemyWristR_object.GetComponent<SpriteRenderer>().sprite = enemyWristR;
+            enemyElbowR_object.GetComponent<SpriteRenderer>().sprite = enemyElbowR;
+            enemyShoulderR_object.GetComponent<SpriteRenderer>().sprite = enemyShoulderR;
+            enemyTorso_object.GetComponent<SpriteRenderer>().sprite = enemyTorso;
+            enemyBootL_object.GetComponent<SpriteRenderer>().sprite = enemyBootL;
+            enemyLegL_object.GetComponent<SpriteRenderer>().sprite = enemyLegL;
+            enemyBootR_object.GetComponent<SpriteRenderer>().sprite = enemyBootR;
+            enemyLegR_object.GetComponent<SpriteRenderer>().sprite = enemyLegR;
+            enemyPelvis_object.GetComponent<SpriteRenderer>().sprite = enemyPelvis;
+        }
         
-        currentHealth = scriptEnemy.maxHealth;
+        void SetEnemy()
+        {
+            boxCollider2D = GetComponent<BoxCollider2D>();
+            // Enemy part
+            currentHealth = maxHealth;
+            healthBar.SetMaxHealth(maxHealth);
+            
+            //animController = scriptEnemy.animController;
+            //GetComponent<Animator>().runtimeAnimatorController = animController;
+            animator = GetComponent<Animator>();
         
-        isFlipped = scriptEnemy.isFlipped;
-    }
-    void SetAttack()
-    {
-        // Enemy Attack
-        attackRange = scriptEnemy.attackRange;
-        attackDamage = scriptEnemy.attackDamage;
-        attackOffset = scriptEnemy.attackOffset;
-        attackMask = scriptEnemy.attackMask;
-    }
+            currentHealth = scriptEnemy.maxHealth;
+        
+            isFlipped = scriptEnemy.isFlipped;
+        }
+        void SetAttack()
+        {
+            // Enemy Attack
+            attackRange = scriptEnemy.attackRange;
+            attackDamage = scriptEnemy.attackDamage;
+            attackOffset = scriptEnemy.attackOffset;
+            attackMask = scriptEnemy.attackMask;
+        }
     
-    public void Attack()
-    {
-        Vector3 pos = transform.position;
-        pos += transform.right * attackOffset.x;
-        pos += transform.up * attackOffset.y;
+        public void Attack()
+        {
+            Vector3 pos = transform.position;
+            pos += transform.right * attackOffset.x;
+            pos += transform.up * attackOffset.y;
 
-        Collider2D colInfo = Physics2D.OverlapCircle(pos, attackRange, attackMask);
-        if (colInfo != null)
-        {
-            colInfo.GetComponent<PlayerCombat>().TakeDamage(attackDamage);
+            Collider2D colInfo = Physics2D.OverlapCircle(pos, attackRange, attackMask);
+            if (colInfo != null)
+            {
+                colInfo.GetComponent<PlayerCombat>().TakeDamage(attackDamage);
+            }
         }
-    }
 
-    void OnTriggerStay2D(Collider2D hitBox)
-    {
-        Rigidbody2D rb = hitBox.GetComponent<Rigidbody2D>();
-        if (rb != null)
+        void OnTriggerStay2D(Collider2D hitBox)
         {
-            animator.SetBool("Radius", true);
+            Rigidbody2D rb = hitBox.GetComponent<Rigidbody2D>();
+            if (rb != null)
+            {
+                animator.SetBool("Radius", true);
+            }
+
+            
         }
-    }
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        Rigidbody2D rb = other.GetComponent<Rigidbody2D>();
-        if (rb != null)
+        private void OnTriggerExit2D(Collider2D other)
         {
-            animator.SetBool("Radius", false);
+            Rigidbody2D rb = other.GetComponent<Rigidbody2D>();
+            if (rb != null)
+            {
+                animator.SetBool("Radius", false);
+            }
         }
-    }
+
+        private void OnTriggerEnter2D(Collider2D hitBox)
+        {
+            if (hitBox.CompareTag("TilemapHitbox") == boxCollider2D.isTrigger) 
+            {
+                Debug.Log("Blocked");
+                if (isFlipped)
+                {
+                    gameObject.transform.position = new Vector3(transform.position.x - .1f, transform.position.y);
+                }
+                else
+                {
+                    gameObject.transform.position = new Vector3(transform.position.x + .1f, transform.position.y);
+                }
+            }
+        }
 
         public void LookAtPlayer()
-    {
-        Vector3 flipped = transform.localScale;
-        flipped.z *= -1f;
-
-        if (transform.position.x > player2.position.x && isFlipped)
         {
-            transform.localScale = flipped;
-            transform.Rotate(0f, 180f, 0f);
-            isFlipped = false;
+            Vector3 flipped = transform.localScale;
+            flipped.z *= -1f;
+
+            if (transform.position.x > player2.position.x && isFlipped)
+            {
+                transform.localScale = flipped;
+                transform.Rotate(0f, 180f, 0f);
+                isFlipped = false;
+            }
+            else if (transform.position.x < player2.position.x && !isFlipped)
+            {
+                transform.localScale = flipped;
+                transform.Rotate(0f, 180f, 0f);
+                isFlipped = true;
+            }
         }
-        else if (transform.position.x < player2.position.x && !isFlipped)
+
+        public void TakeDamage(int damage)
         {
-            transform.localScale = flipped;
-            transform.Rotate(0f, 180f, 0f);
-            isFlipped = true;
+            currentHealth -= damage;
+            healthBar.SetHealth(currentHealth);
+
+            //Play hurt aniamtion
+            animator.SetTrigger("Hurt");
+
+            if (currentHealth <= 0)
+            {
+                Die();
+            }
         }
-    }
 
-    public void TakeDamage(int damage)
-    {
-        currentHealth -= damage;
-        healthBar.SetHealth(currentHealth);
-
-        //Play hurt aniamtion
-        animator.SetTrigger("Hurt");
-
-        if (currentHealth <= 0)
+        void Die()
         {
-            Die();
+            canvas.enabled = false;
+
+            //Die animation
+            animator.SetBool("IsDead", true);
+
+            //Disable enemy
+            GetComponent<Collider2D>().enabled = false;
+            this.enabled = false;
         }
-    }
-
-    void Die()
-    {
-        canvas.enabled = false;
-
-        //Die animation
-        animator.SetBool("IsDead", true);
-
-        //Disable enemy
-        GetComponent<Collider2D>().enabled = false;
-        this.enabled = false;
-    }
     
     
+    }
 }

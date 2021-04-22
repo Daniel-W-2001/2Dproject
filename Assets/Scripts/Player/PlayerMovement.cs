@@ -10,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
 
     public Animator animator;
 
+    public AudioSource jumpSound;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -37,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && Mathf.Abs(rb.velocity.y) < 0.001f)
         {
             rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+            jumpSound.Play();
             animator.SetBool("IsJumping", true);
         }
         if (Mathf.Abs(rb.velocity.y) < 0.001f)

@@ -1,16 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using ScriptableObjects.ScriptableEnemy.Scripts;
 using UnityEngine;
 
 public class PlayerCombat : MonoBehaviour
 {
     public Animator animator;
 
+    private Rigidbody2D rb;
     public Transform attackPoint;
     public float attackRange = 0.5f;
     public LayerMask enemyLayers;
 
-    public int attackDamage = 40;
+    public int attackDamage = 50;
 
     public float attackRate = 2f;
     float nextAttackTime = 0f;
@@ -18,9 +20,15 @@ public class PlayerCombat : MonoBehaviour
     public int maxHealth = 100;
     public int currentHealth;
     public HealthBar healthBar;
+    public GameObject potionPickup;
+    public AudioSource healSound;
+
+    public AudioSource swordSwing;
+    public GameObject respawnPoint;
 
     void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
     }
@@ -29,16 +37,17 @@ public class PlayerCombat : MonoBehaviour
     {
         if (Time.time >= nextAttackTime)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space) && Mathf.Abs(rb.velocity.y) < 0.001f)
             {
                 Attack();
                 nextAttackTime = Time.time + 1f / attackRate;
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.K))
+        if (currentHealth <= 0)
         {
-            TakeDamage(20);
+            animator.SetBool("IsDead", true);
+            Invoke("Die", 1);
         }
     }
 
@@ -46,6 +55,7 @@ public class PlayerCombat : MonoBehaviour
     {
         //Play attack animation
         animator.SetTrigger("Attack");
+        swordSwing.Play();
 
         //Detect enemies in range
         Collider2D [] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
@@ -53,7 +63,9 @@ public class PlayerCombat : MonoBehaviour
         //Deal damage to enemies
         foreach(Collider2D enemy in hitEnemies)
         {
-            enemy.GetComponent<Enemy2>().TakeDamage(attackDamage);
+            enemy.GetComponent<Enemy2>()?.TakeDamage(attackDamage);
+            enemy.GetComponent<Witch>()?.TakeDamage(attackDamage);
+            enemy.GetComponent<WitchBoss>()?.TakeDamage(attackDamage);
         }
     }
 
@@ -61,6 +73,23 @@ public class PlayerCombat : MonoBehaviour
     {
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
+    }
+
+    public void Potion()
+    {
+        var heal = Instantiate(potionPickup, transform.position, transform.rotation);
+        healSound.Play();
+        Destroy(heal, 2f);
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
+    }
+
+    void Die()
+    {
+        animator.SetBool("IsDead", false);
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
+        transform.position = respawnPoint.transform.position;
     }
 
     private void OnDrawGizmosSelected()

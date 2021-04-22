@@ -10,14 +10,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7A640F6C-B241-40B6-897C-AC910F849430/ba/998b3908/Array.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../../../Program Files/Unity/Hub/Editor/2020.2.3f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Image.cs" root0="SKIP_HIGHLIGHTING" />
-  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Enemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/ScriptableEnemy/ScriptableEnemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/ScriptableEnemy/EnemyAttack2.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/ScriptableEnemy/EnemyObject.cs" />
@@ -25,13 +20,18 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/ScriptableEnemy/Scripts/EnemyAttack2.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyAttack.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/ScriptableEnemy/Scripts/RogueWalk2.cs" />
         <option value="$PROJECT_DIR$/Assets/RogueWalk.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerCombat.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/Dialogue/Scripts/TextLoader.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/ScriptableEnemy/Scripts/SpriteScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/ScriptableEnemy/Scripts/EnemySprites.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/ScriptableEnemy/Scripts/EnemyObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Enemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/ScriptableEnemy/Scripts/Enemy2.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerCombat.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/ScriptableEnemy/Scripts/RogueWalk2.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Door.cs" />
+        <option value="$PROJECT_DIR$/Assets/PlayMusic.cs" />
+        <option value="$PROJECT_DIR$/Assets/TileCrumble.cs" />
       </list>
     </option>
   </component>
@@ -76,6 +76,9 @@
       <option name="presentableId" value="Default" />
       <updated>1614278751770</updated>
       <workItem from="1614278764157" duration="8395000" />
+      <workItem from="1614446489620" duration="5256000" />
+      <workItem from="1614812751003" duration="2169000" />
+      <workItem from="1616417560924" duration="2805000" />
     </task>
     <servers />
   </component>
@@ -92,5 +95,9 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="694" y="342" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1080/-1680.10.1680.1050@0.0.1920.1080" timestamp="1614286844955" />
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1616418927372">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/-1680.10.1680.1050@0.0.1920.1080" timestamp="1616418927372" />
   </component>
 </project>
