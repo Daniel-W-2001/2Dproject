@@ -6,6 +6,7 @@ public class WitchBoss : MonoBehaviour
 {
     public Transform player;
     public bool isFlipped = false;
+    public bool bossDead = false;
 
     float attackRange = 20f;
     public Animator animator;
@@ -149,6 +150,7 @@ public class WitchBoss : MonoBehaviour
         {
             var effect = (GameObject)Instantiate(deathEffect, effectPoint.transform.position, Quaternion.identity);
             Destroy(effect, 2);
+            bossDead = true;
             hasPlayed = true;
             //GetComponent<Collider2D>().enabled = false;
             this.gameObject.SetActive(false);
