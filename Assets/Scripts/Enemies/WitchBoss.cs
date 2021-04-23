@@ -9,6 +9,7 @@ public class WitchBoss : MonoBehaviour
     public bool bossDead = false;
 
     float attackRange = 20f;
+    float finalAttackRange = 10f;
     public Animator animator;
 
     float stage2AttackRate = 0.3f;
@@ -100,7 +101,7 @@ public class WitchBoss : MonoBehaviour
             transform.position = point3.transform.position;
         }
 
-        if ((Vector2.Distance(transform.position, player.position) <= attackRange) && (Time.time >= nextAttackTime) && (currentHealth > 0) && (point3done == true))
+        if ((Vector2.Distance(transform.position, player.position) <= finalAttackRange) && (Time.time >= nextAttackTime) && (currentHealth > 0) && (point3done == true))
         {
             animator.SetTrigger("Attack");
             PowerShoot();
