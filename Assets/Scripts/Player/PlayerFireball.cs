@@ -11,6 +11,7 @@ public class PlayerFireball : MonoBehaviour
     GameObject instantiatedObject;
     public AudioSource fireballSound;
 
+    private bool cooldown = false;
     public float attackRate = 2f;
     float nextAttackTime = 0f;
     void Update()
@@ -25,13 +26,26 @@ public class PlayerFireball : MonoBehaviour
                 nextAttackTime = Time.time + 1f / attackRate;
             }
         }
-            
+           
     }
 
-    void Shoot()
+    public void Shoot()
     {
-        instantiatedObject = Instantiate(fireball, firePoint.position, firePoint.rotation);
-        Destroy(instantiatedObject, 2f);
-        fireballSound.Play();
+        if (cooldown == false)
+        {
+            animator.SetBool("IsJumping", false);
+            animator.SetTrigger("CastFireball");
+            instantiatedObject = Instantiate(fireball, firePoint.position, firePoint.rotation);
+            Destroy(instantiatedObject, 2f);
+            fireballSound.Play();
+            //Cooldown for buttonpress
+            Invoke("ResetCooldown", .5f);
+            cooldown = true;
+        }
+    }
+
+    void ResetCooldown()
+    {
+        cooldown = false;
     }
 }

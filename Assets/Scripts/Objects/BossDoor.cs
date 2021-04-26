@@ -11,7 +11,6 @@ public class BossDoor : MonoBehaviour
     public GameObject doorClosed;
     public GameObject door2;
 
-
     void OnTriggerStay2D(Collider2D hitBox)
     {
         if (hitBox.tag == "Player")

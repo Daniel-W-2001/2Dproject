@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    
+    float movement = 0f;
     public float movementSpeed = 1f;
     public float jumpForce = 1f;
 
@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
 
     public AudioSource jumpSound;
 
+    public Joystick joystick;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -20,7 +22,19 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         //Player Movement
-        var movement = Input.GetAxis("Horizontal");
+        //var movement = Input.GetAxis("Horizontal");
+        if (joystick.Horizontal >= .2f)
+        {
+            movement = movementSpeed;
+        } 
+        else if (joystick.Horizontal <= -.2f)
+        {
+            movement = -movementSpeed;
+        }
+        else
+        {
+            movement = 0f;
+        }
         transform.position += new Vector3(movement, 0, 0) * Time.deltaTime * movementSpeed;
 
         animator.SetFloat("Speed", Mathf.Abs(movement));
