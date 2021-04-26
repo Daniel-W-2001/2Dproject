@@ -15580,7 +15580,7 @@ MonoBehaviour:
   player: {fileID: 769606499}
   door2: {fileID: 2115606001}
   doorCooldown: 0
-  joystick: {fileID: 0}
+  joystick: {fileID: 306008120}
   timerCountDown: 1
 --- !u!61 &933049128
 BoxCollider2D:
@@ -15722,7 +15722,7 @@ MonoBehaviour:
   player: {fileID: 769606499}
   door2: {fileID: 213164490}
   doorCooldown: 0
-  joystick: {fileID: 0}
+  joystick: {fileID: 306008120}
   timerCountDown: 1
 --- !u!61 &958735882
 BoxCollider2D:
@@ -39929,7 +39929,7 @@ MonoBehaviour:
   player: {fileID: 769606499}
   door2: {fileID: 300690688}
   doorCooldown: 0
-  joystick: {fileID: 0}
+  joystick: {fileID: 306008120}
   timerCountDown: 1
 --- !u!61 &2067693871
 BoxCollider2D:
@@ -41088,11 +41088,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4087919862629050978, guid: 6938fc71ad5c337428bc7c3cc735755e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -22.5
+      value: -7.3
       objectReference: {fileID: 0}
     - target: {fileID: 4087919862629050978, guid: 6938fc71ad5c337428bc7c3cc735755e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 4087919862629050978, guid: 6938fc71ad5c337428bc7c3cc735755e, type: 3}
       propertyPath: m_LocalPosition.z
