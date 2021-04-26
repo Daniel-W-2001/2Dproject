@@ -14,6 +14,11 @@ public class PlayerFireball : MonoBehaviour
     private bool cooldown = false;
     public float attackRate = 2f;
     float nextAttackTime = 0f;
+
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
     void Update()
     {
         if (Time.time >= nextAttackTime)
@@ -25,8 +30,7 @@ public class PlayerFireball : MonoBehaviour
                 Shoot();
                 nextAttackTime = Time.time + 1f / attackRate;
             }
-        }
-           
+        }   
     }
 
     public void Shoot()

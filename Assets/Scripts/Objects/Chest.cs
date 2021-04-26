@@ -17,6 +17,8 @@ public class Chest : MonoBehaviour
 
     public AudioSource chestSound;
 
+    public Joystick joystick;
+
 
     private void Start()
     {
@@ -42,20 +44,21 @@ public class Chest : MonoBehaviour
     }
     private void Update()
     {
-        if ((radius == true) && Input.GetKeyDown(KeyCode.S) && (open == false))
-        {
-            chestOpen.SetActive(true);
-            chestClosed.SetActive(false);
-            chestSound.Play();
-            GemCount.gemCount += 1;
-            open = true;
-            col.enabled = false;
-            if (!hasPlayed)
+        if ((radius == true) && (open == false))
+            if (joystick.Vertical <= -.5f)
             {
-                var effect = (GameObject)Instantiate(chestEffect, effectPoint.transform.position, Quaternion.identity);
-                Destroy(effect, 1);
-                hasPlayed = true;
+                chestOpen.SetActive(true);
+                chestClosed.SetActive(false);
+                chestSound.Play();
+                GemCount.gemCount += 1;
+                open = true;
+                col.enabled = false;
+                if (!hasPlayed)
+                {
+                    var effect = (GameObject)Instantiate(chestEffect, effectPoint.transform.position, Quaternion.identity);
+                    Destroy(effect, 1);
+                    hasPlayed = true;
+                }
             }
-        }
     }
 }

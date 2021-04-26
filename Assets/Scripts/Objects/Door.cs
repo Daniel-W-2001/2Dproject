@@ -11,6 +11,11 @@ public class Door : MonoBehaviour
     public GameObject player;
     public GameObject door2;
 
+    public bool doorCooldown = false;
+    public Joystick joystick;
+
+    // How long the player needs to stay at location
+    public float timerCountDown = .5f;
 
     private void Start()
     {
@@ -27,18 +32,31 @@ public class Door : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D other)
     {
-        if(other.tag == "Player")
+        if (other.tag == "Player")
         {
             radius = false;
             text.enabled = false;
+            timerCountDown = .5f;
         }
     }
     private void Update()
     {
-        if ((radius == true) && Input.GetKeyDown(KeyCode.S))
+        // Collision timer
+        if (radius == true)
         {
-            player.transform.position = door2.transform.position;
-            doorSound.Play();
+            timerCountDown -= Time.deltaTime;
+            if (timerCountDown < 0)
+            {
+                timerCountDown = 0;
+            }
         }
+
+        if (radius == true)
+            if (timerCountDown <= 0)
+                if (joystick.Vertical <= -.5f)
+                {
+                    player.transform.position = door2.transform.position;
+                    doorSound.Play();
+                }
     }
 }

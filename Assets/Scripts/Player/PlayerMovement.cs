@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -50,15 +51,19 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //Player Jump
-        if (Input.GetButtonDown("Jump") && Mathf.Abs(rb.velocity.y) < 0.001f)
-        {
-            rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
-            jumpSound.Play();
-            animator.SetBool("IsJumping", true);
-        }
+        //if (Input.GetButtonDown("Jump") && Mathf.Abs(rb.velocity.y) < 0.001f)
         if (Mathf.Abs(rb.velocity.y) < 0.001f)
         {
-            animator.SetBool("IsJumping", false);
+            if (joystick.Vertical >= .5f)
+            {
+                rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+                jumpSound.Play();
+                animator.SetBool("IsJumping", true);
+            }
+            if (Mathf.Abs(rb.velocity.y) < 0.001f)
+            {
+                animator.SetBool("IsJumping", false);
+            }
         }
     }
 }

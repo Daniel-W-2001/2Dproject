@@ -15,6 +15,8 @@ public class DoorSwitch : MonoBehaviour
 
     public AudioSource leverSound;
 
+    public Joystick joystick;
+
     private void Start()
     {
         doorOpen.SetActive(false);
@@ -40,25 +42,27 @@ public class DoorSwitch : MonoBehaviour
     }
     private void Update()
     {
-        if ((radius == true) && Input.GetKeyDown(KeyCode.S) && (open == false))
-        {
-            leverOn.SetActive(true);
-            leverOff.SetActive(false);
-            doorOpen.SetActive(true);
-            doorClosed.SetActive(false);
-            leverSound.Play();
-            Invoke("Open", 1);
-        }
+        if ((radius == true) && (open == false))
+            if (joystick.Vertical <= -.5f)
+            {
+                leverOn.SetActive(true);
+                leverOff.SetActive(false);
+                doorOpen.SetActive(true);
+                doorClosed.SetActive(false);
+                leverSound.Play();
+                Invoke("Open", 1);
+            }
 
-        if ((radius == true) && Input.GetKeyDown(KeyCode.S) && (open == true))
-        {
-            leverOn.SetActive(false);
-            leverOff.SetActive(true);
-            doorOpen.SetActive(false);
-            doorClosed.SetActive(true);
-            leverSound.Play();
-            Invoke("Closed", 1);
-        }
+        if ((radius == true) && (open == true))
+            if (joystick.Vertical <= -.5f)
+            {
+                leverOn.SetActive(false);
+                leverOff.SetActive(true);
+                doorOpen.SetActive(false);
+                doorClosed.SetActive(true);
+                leverSound.Play();
+                Invoke("Closed", 1);
+            }
     }
     void Open()
     {

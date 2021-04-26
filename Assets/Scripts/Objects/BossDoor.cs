@@ -11,6 +11,11 @@ public class BossDoor : MonoBehaviour
     public GameObject doorClosed;
     public GameObject door2;
 
+    public Joystick joystick;
+
+    // How long the player needs to stay at location
+    public float timerCountDown = .5f;
+
     void OnTriggerStay2D(Collider2D hitBox)
     {
         if (hitBox.tag == "Player")
@@ -23,19 +28,32 @@ public class BossDoor : MonoBehaviour
         if (other.tag == "Player")
         {
             radius = false;
+            timerCountDown = .5f;
         }
     }
     private void Update()
     {
+        // Collision timer
+        if (radius == true)
+        {
+            timerCountDown -= Time.deltaTime;
+            if (timerCountDown < 0)
+            {
+                timerCountDown = 0;
+            }
+        }
+
         if ((bossScript.bossDead == true))
         {
             doorClosed.SetActive(false);
 
-            if ((radius == true) && Input.GetKeyDown(KeyCode.S))
-            { 
-            player.transform.position = door2.transform.position;
-            doorSound.Play();
-            }
-        }
+            if (radius == true)
+                if (timerCountDown <= 0)
+                    if (joystick.Vertical <= -.5f)
+                    {
+                        player.transform.position = door2.transform.position;
+                        doorSound.Play();
+                    }
+        }   
     }
 }

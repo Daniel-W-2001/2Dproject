@@ -26,11 +26,15 @@ public class PlayerCombat : MonoBehaviour
     public AudioSource swordSwing;
     public GameObject respawnPoint;
 
+    private bool grounded = true;
+    private bool cooldown = false;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -49,24 +53,43 @@ public class PlayerCombat : MonoBehaviour
             animator.SetBool("IsDead", true);
             Invoke("Die", 1);
         }
+
+        if (Mathf.Abs(rb.velocity.y) < 0.001f)
+        {
+            grounded = true;
+        }
+        else
+        {
+            grounded = false;
+        }
     }
 
-    void Attack()
+    public void Attack()
     {
-        //Play attack animation
-        animator.SetTrigger("Attack");
-        swordSwing.Play();
-
-        //Detect enemies in range
-        Collider2D [] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
-
-        //Deal damage to enemies
-        foreach(Collider2D enemy in hitEnemies)
+        if (cooldown == false && grounded == true)
         {
+            //Play attack animation
+            animator.SetTrigger("Attack");
+            swordSwing.Play();
+            Invoke("ResetCooldown", .5f);
+            cooldown = true;
+
+            //Detect enemies in range
+            Collider2D [] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+
+            //Deal damage to enemies
+            foreach(Collider2D enemy in hitEnemies)
+            {
             enemy.GetComponent<Enemy2>()?.TakeDamage(attackDamage);
             enemy.GetComponent<Witch>()?.TakeDamage(attackDamage);
             enemy.GetComponent<WitchBoss>()?.TakeDamage(attackDamage);
+            }
         }
+    }
+
+    void ResetCooldown()
+    {
+        cooldown = false;
     }
 
     public void TakeDamage(int damage)

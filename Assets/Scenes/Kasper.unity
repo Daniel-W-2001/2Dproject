@@ -186,6 +186,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 769606499}
+    - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 306008120}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
 --- !u!1 &28809512
@@ -411,6 +415,10 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 010a7cd8c4346fc43a32c704d961820d, type: 3}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 306008120}
     - target: {fileID: 4373476076975550879, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -590,6 +598,9 @@ MonoBehaviour:
   doorSound: {fileID: 85944716}
   player: {fileID: 769606499}
   door2: {fileID: 105591297}
+  doorCooldown: 0
+  joystick: {fileID: 306008120}
+  timerCountDown: 1
 --- !u!102 &85944718
 TextMesh:
   serializedVersion: 3
@@ -826,6 +837,9 @@ MonoBehaviour:
   doorSound: {fileID: 105591298}
   player: {fileID: 769606499}
   door2: {fileID: 85944715}
+  doorCooldown: 0
+  joystick: {fileID: 306008120}
+  timerCountDown: 1
 --- !u!102 &105591300
 TextMesh:
   serializedVersion: 3
@@ -1048,7 +1062,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: -120, y: 120}
-  m_SizeDelta: {x: 200.319, y: 200.432}
+  m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &135502473
 MonoBehaviour:
@@ -1073,7 +1087,7 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 0.39215687}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0.78431374}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.78431374}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -1094,7 +1108,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4087919862629050977, guid: 6938fc71ad5c337428bc7c3cc735755e, type: 3}
+      - m_Target: {fileID: 769606500}
         m_TargetAssemblyTypeName: PlayerFireball, Assembly-CSharp
         m_MethodName: Shoot
         m_Mode: 1
@@ -1207,6 +1221,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 769606499}
+    - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 306008120}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
 --- !u!1 &174367550
@@ -1356,6 +1374,9 @@ MonoBehaviour:
   doorSound: {fileID: 174367552}
   player: {fileID: 769606499}
   door2: {fileID: 2054988551}
+  doorCooldown: 0
+  joystick: {fileID: 306008120}
+  timerCountDown: 1
 --- !u!102 &174367554
 TextMesh:
   serializedVersion: 3
@@ -1730,6 +1751,9 @@ MonoBehaviour:
   doorSound: {fileID: 213164491}
   player: {fileID: 769606499}
   door2: {fileID: 958735879}
+  doorCooldown: 0
+  joystick: {fileID: 306008120}
+  timerCountDown: 1
 --- !u!102 &213164493
 TextMesh:
   serializedVersion: 3
@@ -1962,6 +1986,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chest (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 306008120}
     - target: {fileID: 4373476076975550879, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: m_RootOrder
       value: 18
@@ -2206,6 +2234,10 @@ PrefabInstance:
       propertyPath: OutputAudioMixerGroup
       value: 
       objectReference: {fileID: -1939208350284049346, guid: 839cf7bf574dbbe40abefc4183d9b9a0, type: 2}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 306008120}
     - target: {fileID: 4373476076975550879, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -2271,6 +2303,10 @@ PrefabInstance:
       propertyPath: OutputAudioMixerGroup
       value: 
       objectReference: {fileID: -1939208350284049346, guid: 839cf7bf574dbbe40abefc4183d9b9a0, type: 2}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 306008120}
     - target: {fileID: 4373476076975550879, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -2380,6 +2416,10 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 010a7cd8c4346fc43a32c704d961820d, type: 3}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 306008120}
     - target: {fileID: 4373476076975550879, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: m_RootOrder
       value: 17
@@ -2506,6 +2546,10 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 0f2b898e23aaf7f49853e4a15de30328, type: 3}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 306008120}
     - target: {fileID: 4373476076975550879, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -2768,6 +2812,10 @@ PrefabInstance:
       propertyPath: OutputAudioMixerGroup
       value: 
       objectReference: {fileID: -1939208350284049346, guid: 839cf7bf574dbbe40abefc4183d9b9a0, type: 2}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 306008120}
     - target: {fileID: 4373476076975550879, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -2900,6 +2948,10 @@ PrefabInstance:
       propertyPath: OutputAudioMixerGroup
       value: 
       objectReference: {fileID: -1939208350284049346, guid: 839cf7bf574dbbe40abefc4183d9b9a0, type: 2}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 306008120}
     - target: {fileID: 4373476076975550879, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -2957,6 +3009,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chest (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 306008120}
     - target: {fileID: 4373476076975550879, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: m_RootOrder
       value: 21
@@ -13341,6 +13397,9 @@ MonoBehaviour:
   doorSound: {fileID: 599542404}
   player: {fileID: 769606499}
   door2: {fileID: 118314164}
+  doorCooldown: 0
+  joystick: {fileID: 306008120}
+  timerCountDown: 1
 --- !u!102 &599542406
 TextMesh:
   serializedVersion: 3
@@ -13736,6 +13795,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 769606499}
+    - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 306008120}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
 --- !u!1001 &647437610
@@ -14289,6 +14352,10 @@ PrefabInstance:
       propertyPath: OutputAudioMixerGroup
       value: 
       objectReference: {fileID: -1939208350284049346, guid: 839cf7bf574dbbe40abefc4183d9b9a0, type: 2}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 306008120}
     - target: {fileID: 4373476076975550879, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -14414,11 +14481,33 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4087919862629050982, guid: 6938fc71ad5c337428bc7c3cc735755e, type: 3}
   m_PrefabInstance: {fileID: 4087919863389743365}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &769606500 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4087919862629050977, guid: 6938fc71ad5c337428bc7c3cc735755e, type: 3}
+  m_PrefabInstance: {fileID: 4087919863389743365}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 769606499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7afce35c43c365e408883e91a445cf03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &769606503 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4087919862629050978, guid: 6938fc71ad5c337428bc7c3cc735755e, type: 3}
   m_PrefabInstance: {fileID: 4087919863389743365}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &769606505 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7861331410780183802, guid: 6938fc71ad5c337428bc7c3cc735755e, type: 3}
+  m_PrefabInstance: {fileID: 4087919863389743365}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 769606499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f4c3d972cca9fe4b904f610a51a075a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!82 &769606511
 AudioSource:
   m_ObjectHideFlags: 0
@@ -14786,6 +14875,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 769606499}
+    - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 306008120}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
 --- !u!1 &836302327 stripped
@@ -14948,6 +15041,7 @@ MonoBehaviour:
   doorOpen: {fileID: 1031048824}
   doorClosed: {fileID: 690849148}
   leverSound: {fileID: 881996782}
+  joystick: {fileID: 306008120}
 --- !u!102 &881996784
 TextMesh:
   serializedVersion: 3
@@ -15123,6 +15217,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chest (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 306008120}
     - target: {fileID: 4373476076975550879, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -15242,6 +15340,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 769606499}
+    - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 306008120}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
 --- !u!1001 &921751832
@@ -15255,6 +15357,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chest
       objectReference: {fileID: 0}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 306008120}
     - target: {fileID: 4373476076975550879, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -15316,6 +15422,10 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 010a7cd8c4346fc43a32c704d961820d, type: 3}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 306008120}
     - target: {fileID: 4373476076975550879, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -15469,6 +15579,9 @@ MonoBehaviour:
   doorSound: {fileID: 562910396}
   player: {fileID: 769606499}
   door2: {fileID: 2115606001}
+  doorCooldown: 0
+  joystick: {fileID: 0}
+  timerCountDown: 1
 --- !u!61 &933049128
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15608,6 +15721,9 @@ MonoBehaviour:
   doorSound: {fileID: 1590100426}
   player: {fileID: 769606499}
   door2: {fileID: 213164490}
+  doorCooldown: 0
+  joystick: {fileID: 0}
+  timerCountDown: 1
 --- !u!61 &958735882
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15712,6 +15828,10 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 0f2b898e23aaf7f49853e4a15de30328, type: 3}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 306008120}
     - target: {fileID: 4373476076975550879, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: m_RootOrder
       value: 23
@@ -31722,6 +31842,10 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 0f2b898e23aaf7f49853e4a15de30328, type: 3}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 306008120}
     - target: {fileID: 4373476076975550879, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: m_RootOrder
       value: 24
@@ -31783,6 +31907,10 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 0f2b898e23aaf7f49853e4a15de30328, type: 3}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 306008120}
     - target: {fileID: 4373476076975550879, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: m_RootOrder
       value: 20
@@ -31919,6 +32047,10 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 010a7cd8c4346fc43a32c704d961820d, type: 3}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 306008120}
     - target: {fileID: 4373476076975550879, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: m_RootOrder
       value: 14
@@ -32283,6 +32415,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 769606499}
+    - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 306008120}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
 --- !u!1001 &1202055705
@@ -32461,6 +32597,9 @@ MonoBehaviour:
   doorSound: {fileID: 1216855399}
   player: {fileID: 769606499}
   door2: {fileID: 1323840764}
+  doorCooldown: 0
+  joystick: {fileID: 306008120}
+  timerCountDown: 1
 --- !u!102 &1216855395
 TextMesh:
   serializedVersion: 3
@@ -32830,7 +32969,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2929252283123773951, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
       propertyPath: axisOptions
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2929252285020698103, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
       propertyPath: m_Color.a
@@ -32849,6 +32988,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chest (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 306008120}
     - target: {fileID: 4373476076975550879, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: m_RootOrder
       value: 16
@@ -32910,6 +33053,10 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 0f2b898e23aaf7f49853e4a15de30328, type: 3}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 306008120}
     - target: {fileID: 4373476076975550879, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: m_RootOrder
       value: 15
@@ -33179,6 +33326,9 @@ MonoBehaviour:
   doorSound: {fileID: 1323840770}
   player: {fileID: 769606499}
   door2: {fileID: 1216855393}
+  doorCooldown: 0
+  joystick: {fileID: 306008120}
+  timerCountDown: 1
 --- !u!102 &1323840768
 TextMesh:
   serializedVersion: 3
@@ -33433,6 +33583,10 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 0f2b898e23aaf7f49853e4a15de30328, type: 3}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 306008120}
     - target: {fileID: 4373476076975550879, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: m_RootOrder
       value: 19
@@ -33735,6 +33889,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 769606499}
+    - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 306008120}
     - target: {fileID: 5133371757831748460, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.029
@@ -36834,6 +36992,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 769606499}
+    - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 306008120}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
 --- !u!1001 &1505179706
@@ -36851,6 +37013,10 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 0f2b898e23aaf7f49853e4a15de30328, type: 3}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 306008120}
     - target: {fileID: 4373476076975550879, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -37043,6 +37209,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 769606499}
+    - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 306008120}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
 --- !u!1001 &1577296083
@@ -37108,6 +37278,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 769606499}
+    - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 306008120}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
 --- !u!1 &1578605374
@@ -37512,6 +37686,7 @@ MonoBehaviour:
   doorOpen: {fileID: 827140773}
   doorClosed: {fileID: 618347561}
   leverSound: {fileID: 1638633789}
+  joystick: {fileID: 306008120}
 --- !u!102 &1638633791
 TextMesh:
   serializedVersion: 3
@@ -37601,6 +37776,139 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.0436686, y: 0.93449783}
   m_EdgeRadius: 0
+--- !u!1 &1638963771
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1638963772}
+  - component: {fileID: 1638963775}
+  - component: {fileID: 1638963774}
+  - component: {fileID: 1638963773}
+  m_Layer: 5
+  m_Name: SwordButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1638963772
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1638963771}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1769380660}
+  m_Father: {fileID: 591718702}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -340, y: 120}
+  m_SizeDelta: {x: 200, y: 200}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1638963773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1638963771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 0.39215687}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0.5882353}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.78431374}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1638963774}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 769606505}
+        m_TargetAssemblyTypeName: PlayerCombat, Assembly-CSharp
+        m_MethodName: Attack
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1638963774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1638963771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1638963775
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1638963771}
+  m_CullTransparentMesh: 1
 --- !u!4 &1640991592 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4373476076975550879, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
@@ -37885,6 +38193,8 @@ MonoBehaviour:
   player: {fileID: 769606499}
   doorClosed: {fileID: 803890926}
   door2: {fileID: 1074309076}
+  joystick: {fileID: 306008120}
+  timerCountDown: 0.5
 --- !u!1001 &1721522431
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38144,8 +38454,91 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 769606499}
+    - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 306008120}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
+--- !u!1 &1769380659
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1769380660}
+  - component: {fileID: 1769380662}
+  - component: {fileID: 1769380661}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1769380660
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1769380659}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1638963772}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1769380661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1769380659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 47
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 4
+    m_MaxSize: 47
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Sword
+--- !u!222 &1769380662
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1769380659}
+  m_CullTransparentMesh: 1
 --- !u!4 &1791264554 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7406348102467004159, guid: 693f9680929c18944acc535b28944898, type: 3}
@@ -38765,6 +39158,10 @@ PrefabInstance:
       propertyPath: OutputAudioMixerGroup
       value: 
       objectReference: {fileID: -1939208350284049346, guid: 839cf7bf574dbbe40abefc4183d9b9a0, type: 2}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 306008120}
     - target: {fileID: 4373476076975550879, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -38891,6 +39288,10 @@ PrefabInstance:
       propertyPath: OutputAudioMixerGroup
       value: 
       objectReference: {fileID: -1939208350284049346, guid: 839cf7bf574dbbe40abefc4183d9b9a0, type: 2}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 306008120}
     - target: {fileID: 4373476076975550879, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -39314,6 +39715,9 @@ MonoBehaviour:
   doorSound: {fileID: 2054988552}
   player: {fileID: 769606499}
   door2: {fileID: 174367550}
+  doorCooldown: 0
+  joystick: {fileID: 306008120}
+  timerCountDown: 1
 --- !u!102 &2054988554
 TextMesh:
   serializedVersion: 3
@@ -39524,6 +39928,9 @@ MonoBehaviour:
   doorSound: {fileID: 366190646}
   player: {fileID: 769606499}
   door2: {fileID: 300690688}
+  doorCooldown: 0
+  joystick: {fileID: 0}
+  timerCountDown: 1
 --- !u!61 &2067693871
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -39769,6 +40176,7 @@ MonoBehaviour:
   doorOpen: {fileID: 7282890216584102184}
   doorClosed: {fileID: 7245746984078490902}
   leverSound: {fileID: 2083014228}
+  joystick: {fileID: 306008120}
 --- !u!82 &2083014228
 AudioSource:
   m_ObjectHideFlags: 0
@@ -40122,6 +40530,9 @@ MonoBehaviour:
   doorSound: {fileID: 2115606002}
   player: {fileID: 769606499}
   door2: {fileID: 933049125}
+  doorCooldown: 0
+  joystick: {fileID: 306008120}
+  timerCountDown: 1
 --- !u!102 &2115606004
 TextMesh:
   serializedVersion: 3
@@ -40288,6 +40699,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 769606499}
+    - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 306008120}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
 --- !u!1001 &2132381742
@@ -40370,6 +40785,10 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 010a7cd8c4346fc43a32c704d961820d, type: 3}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 306008120}
     - target: {fileID: 4373476076975550879, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: m_RootOrder
       value: 22
@@ -40564,6 +40983,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 769606499}
+    - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 306008120}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
 --- !u!4 &3594612182578566201
@@ -40665,11 +41088,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4087919862629050978, guid: 6938fc71ad5c337428bc7c3cc735755e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.09
+      value: -22.5
       objectReference: {fileID: 0}
     - target: {fileID: 4087919862629050978, guid: 6938fc71ad5c337428bc7c3cc735755e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.34
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 4087919862629050978, guid: 6938fc71ad5c337428bc7c3cc735755e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -41537,6 +41960,10 @@ PrefabInstance:
       propertyPath: OutputAudioMixerGroup
       value: 
       objectReference: {fileID: -1939208350284049346, guid: 839cf7bf574dbbe40abefc4183d9b9a0, type: 2}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 306008120}
     - target: {fileID: 4373476076975550879, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: m_RootOrder
       value: 0
