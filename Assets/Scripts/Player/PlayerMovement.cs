@@ -24,11 +24,11 @@ public class PlayerMovement : MonoBehaviour
     {
         //Player Movement
         //var movement = Input.GetAxis("Horizontal");
-        if (joystick.Horizontal >= .2f)
+        if (joystick.Horizontal >= .4f)
         {
             movement = movementSpeed;
         } 
-        else if (joystick.Horizontal <= -.2f)
+        else if (joystick.Horizontal <= -.4f)
         {
             movement = -movementSpeed;
         }
@@ -54,7 +54,7 @@ public class PlayerMovement : MonoBehaviour
         //if (Input.GetButtonDown("Jump") && Mathf.Abs(rb.velocity.y) < 0.001f)
         if (Mathf.Abs(rb.velocity.y) < 0.001f)
         {
-            if (joystick.Vertical >= .5f)
+            if (joystick.Vertical >= .6f)
             {
                 rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
                 jumpSound.Play();
