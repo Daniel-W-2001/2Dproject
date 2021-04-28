@@ -9,7 +9,7 @@ public class WitchBoss : MonoBehaviour
     public bool bossDead = false;
 
     float attackRange = 20f;
-    float finalAttackRange = 10f;
+    float finalAttackRange = 11f;
     public Animator animator;
 
     float stage2AttackRate = 0.3f;

@@ -11,6 +11,8 @@ public class BossDoor : MonoBehaviour
     public GameObject player;
     public GameObject doorClosed;
     public GameObject door2;
+    public GameObject textPopup;
+    MeshRenderer text;
 
     public Button ib;
     public GameObject interactButton;
@@ -20,6 +22,8 @@ public class BossDoor : MonoBehaviour
     {
         Button btn = ib.GetComponent<Button>();
         btn.onClick.AddListener(TaskOnClick);
+        text = textPopup.GetComponent<MeshRenderer>();
+        text.enabled = false;
     }
     void OnTriggerStay2D(Collider2D hitBox)
     {
@@ -30,6 +34,7 @@ public class BossDoor : MonoBehaviour
                 interactButton.SetActive(true);
                 jumpButton.SetActive(false);
                 radius = true;
+                text.enabled = true;
             }
         }
     }
@@ -42,6 +47,7 @@ public class BossDoor : MonoBehaviour
                 interactButton.SetActive(false);
                 jumpButton.SetActive(true);
                 radius = false;
+                text.enabled = false;
             }
         }
     }

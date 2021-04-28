@@ -14,9 +14,6 @@ public class PlayerCombat : MonoBehaviour
 
     public int attackDamage = 50;
 
-    public float attackRate = 2f;
-    float nextAttackTime = 0f;
-
     public int maxHealth = 100;
     public int currentHealth;
     public HealthBar healthBar;
