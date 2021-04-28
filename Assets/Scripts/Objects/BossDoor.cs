@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BossDoor : MonoBehaviour
 {
@@ -11,49 +12,56 @@ public class BossDoor : MonoBehaviour
     public GameObject doorClosed;
     public GameObject door2;
 
-    public Joystick joystick;
+    public Button ib;
+    public GameObject interactButton;
+    public GameObject jumpButton;
 
-    // How long the player needs to stay at location
-    public float timerCountDown = .5f;
-
+    private void Start()
+    {
+        Button btn = ib.GetComponent<Button>();
+        btn.onClick.AddListener(TaskOnClick);
+    }
     void OnTriggerStay2D(Collider2D hitBox)
     {
-        if (hitBox.tag == "Player")
+        if ((bossScript.bossDead == true))
         {
-            radius = true;
+            if (hitBox.tag == "Player")
+            {
+                interactButton.SetActive(true);
+                jumpButton.SetActive(false);
+                radius = true;
+            }
         }
     }
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.tag == "Player")
+        if ((bossScript.bossDead == true))
         {
-            radius = false;
-            timerCountDown = .5f;
+            if (other.tag == "Player")
+            {
+                interactButton.SetActive(false);
+                jumpButton.SetActive(true);
+                radius = false;
+            }
+        }
+    }
+
+    void TaskOnClick()
+    {
+        if ((bossScript.bossDead == true))
+        {
+            if (radius == true)
+            {
+                player.transform.position = door2.transform.position;
+                doorSound.Play();
+            }
         }
     }
     private void Update()
     {
-        // Collision timer
-        if (radius == true)
-        {
-            timerCountDown -= Time.deltaTime;
-            if (timerCountDown < 0)
-            {
-                timerCountDown = 0;
-            }
-        }
-
         if ((bossScript.bossDead == true))
         {
             doorClosed.SetActive(false);
-
-            if (radius == true)
-                if (timerCountDown <= 0)
-                    if (joystick.Vertical <= -.5f)
-                    {
-                        player.transform.position = door2.transform.position;
-                        doorSound.Play();
-                    }
         }   
     }
 }

@@ -49,21 +49,20 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.rotation = Quaternion.Euler(0, 180, 0);
         }
+        if (Mathf.Abs(rb.velocity.y) < 0.001f)
+        {
+            animator.SetBool("IsJumping", false);
+        }
+    }
 
-        //Player Jump
+    public void Jump()
+    {
         //if (Input.GetButtonDown("Jump") && Mathf.Abs(rb.velocity.y) < 0.001f)
         if (Mathf.Abs(rb.velocity.y) < 0.001f)
         {
-            if (joystick.Vertical >= .6f)
-            {
-                rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
-                jumpSound.Play();
-                animator.SetBool("IsJumping", true);
-            }
-            if (Mathf.Abs(rb.velocity.y) < 0.001f)
-            {
-                animator.SetBool("IsJumping", false);
-            }
+            rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+            jumpSound.Play();
+            animator.SetBool("IsJumping", true);
         }
     }
 }

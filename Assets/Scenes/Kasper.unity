@@ -179,6 +179,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
+      propertyPath: ib
+      value: 
+      objectReference: {fileID: 1198552776}
+    - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
       propertyPath: door2
       value: 
       objectReference: {fileID: 2012097844}
@@ -190,6 +194,14 @@ PrefabInstance:
       propertyPath: joystick
       value: 
       objectReference: {fileID: 306008120}
+    - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
+      propertyPath: jumpButton
+      value: 
+      objectReference: {fileID: 1695450860}
+    - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
+      propertyPath: interactButton
+      value: 
+      objectReference: {fileID: 1198552774}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
 --- !u!1 &28809512
@@ -416,9 +428,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 010a7cd8c4346fc43a32c704d961820d, type: 3}
     - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: ib
+      value: 
+      objectReference: {fileID: 1198552776}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: joystick
       value: 
       objectReference: {fileID: 306008120}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: jumpButton
+      value: 
+      objectReference: {fileID: 1695450860}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: interactButton
+      value: 
+      objectReference: {fileID: 1198552774}
     - target: {fileID: 4373476076975550879, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -598,9 +622,9 @@ MonoBehaviour:
   doorSound: {fileID: 85944716}
   player: {fileID: 769606499}
   door2: {fileID: 105591297}
-  doorCooldown: 0
-  joystick: {fileID: 306008120}
-  timerCountDown: 1
+  ib: {fileID: 1198552776}
+  interactButton: {fileID: 1198552774}
+  jumpButton: {fileID: 1695450860}
 --- !u!102 &85944718
 TextMesh:
   serializedVersion: 3
@@ -837,9 +861,9 @@ MonoBehaviour:
   doorSound: {fileID: 105591298}
   player: {fileID: 769606499}
   door2: {fileID: 85944715}
-  doorCooldown: 0
-  joystick: {fileID: 306008120}
-  timerCountDown: 1
+  ib: {fileID: 1198552776}
+  interactButton: {fileID: 1198552774}
+  jumpButton: {fileID: 1695450860}
 --- !u!102 &105591300
 TextMesh:
   serializedVersion: 3
@@ -1061,7 +1085,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -120, y: 120}
+  m_AnchoredPosition: {x: -340, y: 120}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &135502473
@@ -1214,6 +1238,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
+      propertyPath: ib
+      value: 
+      objectReference: {fileID: 1198552776}
+    - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
       propertyPath: door2
       value: 
       objectReference: {fileID: 2091087382}
@@ -1225,6 +1253,14 @@ PrefabInstance:
       propertyPath: joystick
       value: 
       objectReference: {fileID: 306008120}
+    - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
+      propertyPath: jumpButton
+      value: 
+      objectReference: {fileID: 1695450860}
+    - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
+      propertyPath: interactButton
+      value: 
+      objectReference: {fileID: 1198552774}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
 --- !u!1 &174367550
@@ -1374,9 +1410,9 @@ MonoBehaviour:
   doorSound: {fileID: 174367552}
   player: {fileID: 769606499}
   door2: {fileID: 2054988551}
-  doorCooldown: 0
-  joystick: {fileID: 306008120}
-  timerCountDown: 1
+  ib: {fileID: 1198552776}
+  interactButton: {fileID: 1198552774}
+  jumpButton: {fileID: 1695450860}
 --- !u!102 &174367554
 TextMesh:
   serializedVersion: 3
@@ -1751,9 +1787,9 @@ MonoBehaviour:
   doorSound: {fileID: 213164491}
   player: {fileID: 769606499}
   door2: {fileID: 958735879}
-  doorCooldown: 0
-  joystick: {fileID: 306008120}
-  timerCountDown: 1
+  ib: {fileID: 1198552776}
+  interactButton: {fileID: 1198552774}
+  jumpButton: {fileID: 1695450860}
 --- !u!102 &213164493
 TextMesh:
   serializedVersion: 3
@@ -1987,9 +2023,21 @@ PrefabInstance:
       value: Chest (8)
       objectReference: {fileID: 0}
     - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: ib
+      value: 
+      objectReference: {fileID: 1198552776}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: joystick
       value: 
       objectReference: {fileID: 306008120}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: jumpButton
+      value: 
+      objectReference: {fileID: 1695450860}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: interactButton
+      value: 
+      objectReference: {fileID: 1198552774}
     - target: {fileID: 4373476076975550879, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: m_RootOrder
       value: 18
@@ -2235,9 +2283,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -1939208350284049346, guid: 839cf7bf574dbbe40abefc4183d9b9a0, type: 2}
     - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: ib
+      value: 
+      objectReference: {fileID: 1198552776}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: joystick
       value: 
       objectReference: {fileID: 306008120}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: jumpButton
+      value: 
+      objectReference: {fileID: 1695450860}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: interactButton
+      value: 
+      objectReference: {fileID: 1198552774}
     - target: {fileID: 4373476076975550879, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -2304,9 +2364,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -1939208350284049346, guid: 839cf7bf574dbbe40abefc4183d9b9a0, type: 2}
     - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: ib
+      value: 
+      objectReference: {fileID: 1198552776}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: joystick
       value: 
       objectReference: {fileID: 306008120}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: jumpButton
+      value: 
+      objectReference: {fileID: 1695450860}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: interactButton
+      value: 
+      objectReference: {fileID: 1198552774}
     - target: {fileID: 4373476076975550879, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -2417,9 +2489,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 010a7cd8c4346fc43a32c704d961820d, type: 3}
     - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: ib
+      value: 
+      objectReference: {fileID: 1198552776}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: joystick
       value: 
       objectReference: {fileID: 306008120}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: jumpButton
+      value: 
+      objectReference: {fileID: 1695450860}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: interactButton
+      value: 
+      objectReference: {fileID: 1198552774}
     - target: {fileID: 4373476076975550879, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: m_RootOrder
       value: 17
@@ -2547,9 +2631,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 0f2b898e23aaf7f49853e4a15de30328, type: 3}
     - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: ib
+      value: 
+      objectReference: {fileID: 1198552776}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: joystick
       value: 
       objectReference: {fileID: 306008120}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: jumpButton
+      value: 
+      objectReference: {fileID: 1695450860}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: interactButton
+      value: 
+      objectReference: {fileID: 1198552774}
     - target: {fileID: 4373476076975550879, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -2813,9 +2909,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -1939208350284049346, guid: 839cf7bf574dbbe40abefc4183d9b9a0, type: 2}
     - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: ib
+      value: 
+      objectReference: {fileID: 1198552776}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: joystick
       value: 
       objectReference: {fileID: 306008120}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: jumpButton
+      value: 
+      objectReference: {fileID: 1695450860}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: interactButton
+      value: 
+      objectReference: {fileID: 1198552774}
     - target: {fileID: 4373476076975550879, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -2949,9 +3057,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -1939208350284049346, guid: 839cf7bf574dbbe40abefc4183d9b9a0, type: 2}
     - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: ib
+      value: 
+      objectReference: {fileID: 1198552776}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: joystick
       value: 
       objectReference: {fileID: 306008120}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: jumpButton
+      value: 
+      objectReference: {fileID: 1695450860}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: interactButton
+      value: 
+      objectReference: {fileID: 1198552774}
     - target: {fileID: 4373476076975550879, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -3010,9 +3130,21 @@ PrefabInstance:
       value: Chest (11)
       objectReference: {fileID: 0}
     - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: ib
+      value: 
+      objectReference: {fileID: 1198552776}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: joystick
       value: 
       objectReference: {fileID: 306008120}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: jumpButton
+      value: 
+      objectReference: {fileID: 1695450860}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: interactButton
+      value: 
+      objectReference: {fileID: 1198552774}
     - target: {fileID: 4373476076975550879, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: m_RootOrder
       value: 21
@@ -13397,9 +13529,9 @@ MonoBehaviour:
   doorSound: {fileID: 599542404}
   player: {fileID: 769606499}
   door2: {fileID: 118314164}
-  doorCooldown: 0
-  joystick: {fileID: 306008120}
-  timerCountDown: 1
+  ib: {fileID: 1198552776}
+  interactButton: {fileID: 1198552774}
+  jumpButton: {fileID: 1695450860}
 --- !u!102 &599542406
 TextMesh:
   serializedVersion: 3
@@ -13788,6 +13920,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
+      propertyPath: ib
+      value: 
+      objectReference: {fileID: 1198552776}
+    - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
       propertyPath: door2
       value: 
       objectReference: {fileID: 1470073046}
@@ -13799,6 +13935,14 @@ PrefabInstance:
       propertyPath: joystick
       value: 
       objectReference: {fileID: 306008120}
+    - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
+      propertyPath: jumpButton
+      value: 
+      objectReference: {fileID: 1695450860}
+    - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
+      propertyPath: interactButton
+      value: 
+      objectReference: {fileID: 1198552774}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
 --- !u!1001 &647437610
@@ -14353,9 +14497,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -1939208350284049346, guid: 839cf7bf574dbbe40abefc4183d9b9a0, type: 2}
     - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: ib
+      value: 
+      objectReference: {fileID: 1198552776}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: joystick
       value: 
       objectReference: {fileID: 306008120}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: jumpButton
+      value: 
+      objectReference: {fileID: 1695450860}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: interactButton
+      value: 
+      objectReference: {fileID: 1198552774}
     - target: {fileID: 4373476076975550879, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -14506,6 +14662,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4f4c3d972cca9fe4b904f610a51a075a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &769606507 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4341313670740160443, guid: 6938fc71ad5c337428bc7c3cc735755e, type: 3}
+  m_PrefabInstance: {fileID: 4087919863389743365}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 769606499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7f7f8eae35b49d4e8700de40679ee47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!82 &769606511
@@ -14868,6 +15035,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
+      propertyPath: ib
+      value: 
+      objectReference: {fileID: 1198552776}
+    - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
       propertyPath: door2
       value: 
       objectReference: {fileID: 2067693868}
@@ -14879,6 +15050,14 @@ PrefabInstance:
       propertyPath: joystick
       value: 
       objectReference: {fileID: 306008120}
+    - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
+      propertyPath: jumpButton
+      value: 
+      objectReference: {fileID: 1695450860}
+    - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
+      propertyPath: interactButton
+      value: 
+      objectReference: {fileID: 1198552774}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
 --- !u!1 &836302327 stripped
@@ -15041,7 +15220,9 @@ MonoBehaviour:
   doorOpen: {fileID: 1031048824}
   doorClosed: {fileID: 690849148}
   leverSound: {fileID: 881996782}
-  joystick: {fileID: 306008120}
+  ib: {fileID: 1198552776}
+  interactButton: {fileID: 1198552774}
+  jumpButton: {fileID: 1695450860}
 --- !u!102 &881996784
 TextMesh:
   serializedVersion: 3
@@ -15218,9 +15399,21 @@ PrefabInstance:
       value: Chest (1)
       objectReference: {fileID: 0}
     - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: ib
+      value: 
+      objectReference: {fileID: 1198552776}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: joystick
       value: 
       objectReference: {fileID: 306008120}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: jumpButton
+      value: 
+      objectReference: {fileID: 1695450860}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: interactButton
+      value: 
+      objectReference: {fileID: 1198552774}
     - target: {fileID: 4373476076975550879, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -15272,6 +15465,85 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7406348102467004159, guid: 693f9680929c18944acc535b28944898, type: 3}
   m_PrefabInstance: {fileID: 259997735}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &904286423
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 904286424}
+  - component: {fileID: 904286426}
+  - component: {fileID: 904286425}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &904286424
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904286423}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1198552775}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &904286425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904286423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 47
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 4
+    m_MaxSize: 47
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Interact
+--- !u!222 &904286426
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904286423}
+  m_CullTransparentMesh: 1
 --- !u!4 &920001947 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7406348102467004159, guid: 693f9680929c18944acc535b28944898, type: 3}
@@ -15333,6 +15605,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
+      propertyPath: ib
+      value: 
+      objectReference: {fileID: 1198552776}
+    - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
       propertyPath: door2
       value: 
       objectReference: {fileID: 331051707}
@@ -15344,6 +15620,14 @@ PrefabInstance:
       propertyPath: joystick
       value: 
       objectReference: {fileID: 306008120}
+    - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
+      propertyPath: jumpButton
+      value: 
+      objectReference: {fileID: 1695450860}
+    - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
+      propertyPath: interactButton
+      value: 
+      objectReference: {fileID: 1198552774}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
 --- !u!1001 &921751832
@@ -15358,9 +15642,21 @@ PrefabInstance:
       value: Chest
       objectReference: {fileID: 0}
     - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: ib
+      value: 
+      objectReference: {fileID: 1198552776}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: joystick
       value: 
       objectReference: {fileID: 306008120}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: jumpButton
+      value: 
+      objectReference: {fileID: 1695450860}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: interactButton
+      value: 
+      objectReference: {fileID: 1198552774}
     - target: {fileID: 4373476076975550879, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -15423,9 +15719,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 010a7cd8c4346fc43a32c704d961820d, type: 3}
     - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: ib
+      value: 
+      objectReference: {fileID: 1198552776}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: joystick
       value: 
       objectReference: {fileID: 306008120}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: jumpButton
+      value: 
+      objectReference: {fileID: 1695450860}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: interactButton
+      value: 
+      objectReference: {fileID: 1198552774}
     - target: {fileID: 4373476076975550879, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -15579,9 +15887,9 @@ MonoBehaviour:
   doorSound: {fileID: 562910396}
   player: {fileID: 769606499}
   door2: {fileID: 2115606001}
-  doorCooldown: 0
-  joystick: {fileID: 306008120}
-  timerCountDown: 1
+  ib: {fileID: 1198552776}
+  interactButton: {fileID: 1198552774}
+  jumpButton: {fileID: 1695450860}
 --- !u!61 &933049128
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15721,9 +16029,9 @@ MonoBehaviour:
   doorSound: {fileID: 1590100426}
   player: {fileID: 769606499}
   door2: {fileID: 213164490}
-  doorCooldown: 0
-  joystick: {fileID: 306008120}
-  timerCountDown: 1
+  ib: {fileID: 1198552776}
+  interactButton: {fileID: 1198552774}
+  jumpButton: {fileID: 1695450860}
 --- !u!61 &958735882
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15829,9 +16137,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 0f2b898e23aaf7f49853e4a15de30328, type: 3}
     - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: ib
+      value: 
+      objectReference: {fileID: 1198552776}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: joystick
       value: 
       objectReference: {fileID: 306008120}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: jumpButton
+      value: 
+      objectReference: {fileID: 1695450860}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: interactButton
+      value: 
+      objectReference: {fileID: 1198552774}
     - target: {fileID: 4373476076975550879, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: m_RootOrder
       value: 23
@@ -31843,9 +32163,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 0f2b898e23aaf7f49853e4a15de30328, type: 3}
     - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: ib
+      value: 
+      objectReference: {fileID: 1198552776}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: joystick
       value: 
       objectReference: {fileID: 306008120}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: jumpButton
+      value: 
+      objectReference: {fileID: 1695450860}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: interactButton
+      value: 
+      objectReference: {fileID: 1198552774}
     - target: {fileID: 4373476076975550879, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: m_RootOrder
       value: 24
@@ -31908,9 +32240,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 0f2b898e23aaf7f49853e4a15de30328, type: 3}
     - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: ib
+      value: 
+      objectReference: {fileID: 1198552776}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: joystick
       value: 
       objectReference: {fileID: 306008120}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: jumpButton
+      value: 
+      objectReference: {fileID: 1695450860}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: interactButton
+      value: 
+      objectReference: {fileID: 1198552774}
     - target: {fileID: 4373476076975550879, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: m_RootOrder
       value: 20
@@ -32048,9 +32392,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 010a7cd8c4346fc43a32c704d961820d, type: 3}
     - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: ib
+      value: 
+      objectReference: {fileID: 1198552776}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: joystick
       value: 
       objectReference: {fileID: 306008120}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: jumpButton
+      value: 
+      objectReference: {fileID: 1695450860}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: interactButton
+      value: 
+      objectReference: {fileID: 1198552774}
     - target: {fileID: 4373476076975550879, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: m_RootOrder
       value: 14
@@ -32408,6 +32764,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
+      propertyPath: ib
+      value: 
+      objectReference: {fileID: 1198552776}
+    - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
       propertyPath: door2
       value: 
       objectReference: {fileID: 1590941293}
@@ -32419,8 +32779,137 @@ PrefabInstance:
       propertyPath: joystick
       value: 
       objectReference: {fileID: 306008120}
+    - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
+      propertyPath: jumpButton
+      value: 
+      objectReference: {fileID: 1695450860}
+    - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
+      propertyPath: interactButton
+      value: 
+      objectReference: {fileID: 1198552774}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
+--- !u!1 &1198552774
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1198552775}
+  - component: {fileID: 1198552778}
+  - component: {fileID: 1198552777}
+  - component: {fileID: 1198552776}
+  m_Layer: 5
+  m_Name: InteractButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1198552775
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1198552774}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 904286424}
+  m_Father: {fileID: 591718702}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -120, y: 120}
+  m_SizeDelta: {x: 200, y: 200}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1198552776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1198552774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 0.5882353}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0.5882353}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.78431374}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1198552777}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1198552777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1198552774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1198552778
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1198552774}
+  m_CullTransparentMesh: 1
 --- !u!1001 &1202055705
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32597,9 +33086,9 @@ MonoBehaviour:
   doorSound: {fileID: 1216855399}
   player: {fileID: 769606499}
   door2: {fileID: 1323840764}
-  doorCooldown: 0
-  joystick: {fileID: 306008120}
-  timerCountDown: 1
+  ib: {fileID: 1198552776}
+  interactButton: {fileID: 1198552774}
+  jumpButton: {fileID: 1695450860}
 --- !u!102 &1216855395
 TextMesh:
   serializedVersion: 3
@@ -32969,7 +33458,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2929252283123773951, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
       propertyPath: axisOptions
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2929252285020698103, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
       propertyPath: m_Color.a
@@ -32989,9 +33478,21 @@ PrefabInstance:
       value: Chest (6)
       objectReference: {fileID: 0}
     - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: ib
+      value: 
+      objectReference: {fileID: 1198552776}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: joystick
       value: 
       objectReference: {fileID: 306008120}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: jumpButton
+      value: 
+      objectReference: {fileID: 1695450860}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: interactButton
+      value: 
+      objectReference: {fileID: 1198552774}
     - target: {fileID: 4373476076975550879, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: m_RootOrder
       value: 16
@@ -33054,9 +33555,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 0f2b898e23aaf7f49853e4a15de30328, type: 3}
     - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: ib
+      value: 
+      objectReference: {fileID: 1198552776}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: joystick
       value: 
       objectReference: {fileID: 306008120}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: jumpButton
+      value: 
+      objectReference: {fileID: 1695450860}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: interactButton
+      value: 
+      objectReference: {fileID: 1198552774}
     - target: {fileID: 4373476076975550879, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: m_RootOrder
       value: 15
@@ -33326,9 +33839,9 @@ MonoBehaviour:
   doorSound: {fileID: 1323840770}
   player: {fileID: 769606499}
   door2: {fileID: 1216855393}
-  doorCooldown: 0
-  joystick: {fileID: 306008120}
-  timerCountDown: 1
+  ib: {fileID: 1198552776}
+  interactButton: {fileID: 1198552774}
+  jumpButton: {fileID: 1695450860}
 --- !u!102 &1323840768
 TextMesh:
   serializedVersion: 3
@@ -33566,6 +34079,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 212931201863385090, guid: 2e158dd1922dd2f429687179bedb7503, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e158dd1922dd2f429687179bedb7503, type: 3}
 --- !u!1001 &1347490393
@@ -33584,9 +34101,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 0f2b898e23aaf7f49853e4a15de30328, type: 3}
     - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: ib
+      value: 
+      objectReference: {fileID: 1198552776}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: joystick
       value: 
       objectReference: {fileID: 306008120}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: jumpButton
+      value: 
+      objectReference: {fileID: 1695450860}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: interactButton
+      value: 
+      objectReference: {fileID: 1198552774}
     - target: {fileID: 4373476076975550879, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: m_RootOrder
       value: 19
@@ -33882,6 +34411,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
+      propertyPath: ib
+      value: 
+      objectReference: {fileID: 1198552776}
+    - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
       propertyPath: door2
       value: 
       objectReference: {fileID: 111871697}
@@ -33893,6 +34426,14 @@ PrefabInstance:
       propertyPath: joystick
       value: 
       objectReference: {fileID: 306008120}
+    - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
+      propertyPath: jumpButton
+      value: 
+      objectReference: {fileID: 1695450860}
+    - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
+      propertyPath: interactButton
+      value: 
+      objectReference: {fileID: 1198552774}
     - target: {fileID: 5133371757831748460, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.029
@@ -34215,6 +34756,79 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 153950705840117682, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
   m_PrefabInstance: {fileID: 137258957}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1473391552
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1473391553}
+  - component: {fileID: 1473391554}
+  - component: {fileID: 1473391555}
+  m_Layer: 6
+  m_Name: MeleeTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1473391553
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1473391552}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 769606503}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1473391554
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1473391552}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.5623882, y: -0.44226623}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.801825, y: 1.8845325}
+  m_EdgeRadius: 0
+--- !u!114 &1473391555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1473391552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baa00a8dc31a12b44a86d11e4b49444c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meleeButton: {fileID: 1638963771}
+  fireballButton: {fileID: 135502471}
+  col: {fileID: 1473391554}
 --- !u!1001 &1488685821
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36985,6 +37599,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
+      propertyPath: ib
+      value: 
+      objectReference: {fileID: 1198552776}
+    - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
       propertyPath: door2
       value: 
       objectReference: {fileID: 1650009722}
@@ -36996,6 +37614,14 @@ PrefabInstance:
       propertyPath: joystick
       value: 
       objectReference: {fileID: 306008120}
+    - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
+      propertyPath: jumpButton
+      value: 
+      objectReference: {fileID: 1695450860}
+    - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
+      propertyPath: interactButton
+      value: 
+      objectReference: {fileID: 1198552774}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
 --- !u!1001 &1505179706
@@ -37014,9 +37640,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 0f2b898e23aaf7f49853e4a15de30328, type: 3}
     - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: ib
+      value: 
+      objectReference: {fileID: 1198552776}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: joystick
       value: 
       objectReference: {fileID: 306008120}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: jumpButton
+      value: 
+      objectReference: {fileID: 1695450860}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: interactButton
+      value: 
+      objectReference: {fileID: 1198552774}
     - target: {fileID: 4373476076975550879, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -37202,6 +37840,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
+      propertyPath: ib
+      value: 
+      objectReference: {fileID: 1198552776}
+    - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
       propertyPath: door2
       value: 
       objectReference: {fileID: 447260346}
@@ -37213,6 +37855,14 @@ PrefabInstance:
       propertyPath: joystick
       value: 
       objectReference: {fileID: 306008120}
+    - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
+      propertyPath: jumpButton
+      value: 
+      objectReference: {fileID: 1695450860}
+    - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
+      propertyPath: interactButton
+      value: 
+      objectReference: {fileID: 1198552774}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
 --- !u!1001 &1577296083
@@ -37271,9 +37921,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
+      propertyPath: ib
+      value: 
+      objectReference: {fileID: 1198552776}
+    - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
       propertyPath: door2
       value: 
       objectReference: {fileID: 1898073653}
+    - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
+      propertyPath: button
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
       propertyPath: player
       value: 
@@ -37282,6 +37940,14 @@ PrefabInstance:
       propertyPath: joystick
       value: 
       objectReference: {fileID: 306008120}
+    - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
+      propertyPath: jumpButton
+      value: 
+      objectReference: {fileID: 1695450860}
+    - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
+      propertyPath: interactButton
+      value: 
+      objectReference: {fileID: 1198552774}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
 --- !u!1 &1578605374
@@ -37686,7 +38352,9 @@ MonoBehaviour:
   doorOpen: {fileID: 827140773}
   doorClosed: {fileID: 618347561}
   leverSound: {fileID: 1638633789}
-  joystick: {fileID: 306008120}
+  ib: {fileID: 1198552776}
+  interactButton: {fileID: 1198552774}
+  jumpButton: {fileID: 1695450860}
 --- !u!102 &1638633791
 TextMesh:
   serializedVersion: 3
@@ -37794,7 +38462,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1638963772
 RectTransform:
   m_ObjectHideFlags: 0
@@ -37836,7 +38504,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 0.39215687}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 0.5882353}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0.5882353}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.78431374}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -38039,6 +38707,139 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1685909567}
   m_CullTransparentMesh: 1
+--- !u!1 &1695450860
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1695450861}
+  - component: {fileID: 1695450864}
+  - component: {fileID: 1695450863}
+  - component: {fileID: 1695450862}
+  m_Layer: 5
+  m_Name: JumpButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1695450861
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1695450860}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2111776168}
+  m_Father: {fileID: 591718702}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -120, y: 120}
+  m_SizeDelta: {x: 200, y: 200}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1695450862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1695450860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 0.39215687}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0.5882353}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.78431374}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1695450863}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 769606507}
+        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+        m_MethodName: Jump
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1695450863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1695450860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1695450864
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1695450860}
+  m_CullTransparentMesh: 1
 --- !u!4 &1705828727 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7406348102467004159, guid: 693f9680929c18944acc535b28944898, type: 3}
@@ -38193,8 +38994,9 @@ MonoBehaviour:
   player: {fileID: 769606499}
   doorClosed: {fileID: 803890926}
   door2: {fileID: 1074309076}
-  joystick: {fileID: 306008120}
-  timerCountDown: 0.5
+  ib: {fileID: 1198552776}
+  interactButton: {fileID: 1198552774}
+  jumpButton: {fileID: 1695450860}
 --- !u!1001 &1721522431
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38447,6 +39249,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
+      propertyPath: ib
+      value: 
+      objectReference: {fileID: 1198552776}
+    - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
       propertyPath: door2
       value: 
       objectReference: {fileID: 836302327}
@@ -38458,6 +39264,14 @@ PrefabInstance:
       propertyPath: joystick
       value: 
       objectReference: {fileID: 306008120}
+    - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
+      propertyPath: jumpButton
+      value: 
+      objectReference: {fileID: 1695450860}
+    - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
+      propertyPath: interactButton
+      value: 
+      objectReference: {fileID: 1198552774}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
 --- !u!1 &1769380659
@@ -39159,9 +39973,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -1939208350284049346, guid: 839cf7bf574dbbe40abefc4183d9b9a0, type: 2}
     - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: ib
+      value: 
+      objectReference: {fileID: 1198552776}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: joystick
       value: 
       objectReference: {fileID: 306008120}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: jumpButton
+      value: 
+      objectReference: {fileID: 1695450860}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: interactButton
+      value: 
+      objectReference: {fileID: 1198552774}
     - target: {fileID: 4373476076975550879, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -39289,9 +40115,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -1939208350284049346, guid: 839cf7bf574dbbe40abefc4183d9b9a0, type: 2}
     - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: ib
+      value: 
+      objectReference: {fileID: 1198552776}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: joystick
       value: 
       objectReference: {fileID: 306008120}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: jumpButton
+      value: 
+      objectReference: {fileID: 1695450860}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: interactButton
+      value: 
+      objectReference: {fileID: 1198552774}
     - target: {fileID: 4373476076975550879, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -39715,9 +40553,9 @@ MonoBehaviour:
   doorSound: {fileID: 2054988552}
   player: {fileID: 769606499}
   door2: {fileID: 174367550}
-  doorCooldown: 0
-  joystick: {fileID: 306008120}
-  timerCountDown: 1
+  ib: {fileID: 1198552776}
+  interactButton: {fileID: 1198552774}
+  jumpButton: {fileID: 1695450860}
 --- !u!102 &2054988554
 TextMesh:
   serializedVersion: 3
@@ -39928,9 +40766,9 @@ MonoBehaviour:
   doorSound: {fileID: 366190646}
   player: {fileID: 769606499}
   door2: {fileID: 300690688}
-  doorCooldown: 0
-  joystick: {fileID: 306008120}
-  timerCountDown: 1
+  ib: {fileID: 1198552776}
+  interactButton: {fileID: 1198552774}
+  jumpButton: {fileID: 1695450860}
 --- !u!61 &2067693871
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -40176,7 +41014,9 @@ MonoBehaviour:
   doorOpen: {fileID: 7282890216584102184}
   doorClosed: {fileID: 7245746984078490902}
   leverSound: {fileID: 2083014228}
-  joystick: {fileID: 306008120}
+  ib: {fileID: 1198552776}
+  interactButton: {fileID: 1198552774}
+  jumpButton: {fileID: 1695450860}
 --- !u!82 &2083014228
 AudioSource:
   m_ObjectHideFlags: 0
@@ -40353,6 +41193,85 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bff18508c0a59f948ac193210aa13f92, type: 3}
+--- !u!1 &2111776167
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2111776168}
+  - component: {fileID: 2111776170}
+  - component: {fileID: 2111776169}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2111776168
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2111776167}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1695450861}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2111776169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2111776167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 47
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 4
+    m_MaxSize: 47
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Jump
+--- !u!222 &2111776170
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2111776167}
+  m_CullTransparentMesh: 1
 --- !u!1 &2112827245
 GameObject:
   m_ObjectHideFlags: 0
@@ -40530,9 +41449,9 @@ MonoBehaviour:
   doorSound: {fileID: 2115606002}
   player: {fileID: 769606499}
   door2: {fileID: 933049125}
-  doorCooldown: 0
-  joystick: {fileID: 306008120}
-  timerCountDown: 1
+  ib: {fileID: 1198552776}
+  interactButton: {fileID: 1198552774}
+  jumpButton: {fileID: 1695450860}
 --- !u!102 &2115606004
 TextMesh:
   serializedVersion: 3
@@ -40692,6 +41611,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
+      propertyPath: ib
+      value: 
+      objectReference: {fileID: 1198552776}
+    - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
       propertyPath: door2
       value: 
       objectReference: {fileID: 1380649049}
@@ -40703,6 +41626,14 @@ PrefabInstance:
       propertyPath: joystick
       value: 
       objectReference: {fileID: 306008120}
+    - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
+      propertyPath: jumpButton
+      value: 
+      objectReference: {fileID: 1695450860}
+    - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
+      propertyPath: interactButton
+      value: 
+      objectReference: {fileID: 1198552774}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
 --- !u!1001 &2132381742
@@ -40786,9 +41717,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 010a7cd8c4346fc43a32c704d961820d, type: 3}
     - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: ib
+      value: 
+      objectReference: {fileID: 1198552776}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: joystick
       value: 
       objectReference: {fileID: 306008120}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: jumpButton
+      value: 
+      objectReference: {fileID: 1695450860}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: interactButton
+      value: 
+      objectReference: {fileID: 1198552774}
     - target: {fileID: 4373476076975550879, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: m_RootOrder
       value: 22
@@ -40976,6 +41919,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
+      propertyPath: ib
+      value: 
+      objectReference: {fileID: 1198552776}
+    - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
       propertyPath: door2
       value: 
       objectReference: {fileID: 599542403}
@@ -40987,6 +41934,14 @@ PrefabInstance:
       propertyPath: joystick
       value: 
       objectReference: {fileID: 306008120}
+    - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
+      propertyPath: jumpButton
+      value: 
+      objectReference: {fileID: 1695450860}
+    - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
+      propertyPath: interactButton
+      value: 
+      objectReference: {fileID: 1198552774}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
 --- !u!4 &3594612182578566201
@@ -41088,11 +42043,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4087919862629050978, guid: 6938fc71ad5c337428bc7c3cc735755e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.3
+      value: -7.64
       objectReference: {fileID: 0}
     - target: {fileID: 4087919862629050978, guid: 6938fc71ad5c337428bc7c3cc735755e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.6
+      value: 0.18
       objectReference: {fileID: 0}
     - target: {fileID: 4087919862629050978, guid: 6938fc71ad5c337428bc7c3cc735755e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -41961,9 +42916,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -1939208350284049346, guid: 839cf7bf574dbbe40abefc4183d9b9a0, type: 2}
     - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: ib
+      value: 
+      objectReference: {fileID: 1198552776}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: joystick
       value: 
       objectReference: {fileID: 306008120}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: jumpButton
+      value: 
+      objectReference: {fileID: 1695450860}
+    - target: {fileID: 4373476076975550878, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
+      propertyPath: interactButton
+      value: 
+      objectReference: {fileID: 1198552774}
     - target: {fileID: 4373476076975550879, guid: 3b95f0e512d89a14283ce2a095757478, type: 3}
       propertyPath: m_RootOrder
       value: 0

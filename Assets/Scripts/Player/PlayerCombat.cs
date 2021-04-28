@@ -39,15 +39,6 @@ public class PlayerCombat : MonoBehaviour
 
     void Update()
     {
-        if (Time.time >= nextAttackTime)
-        {
-            if (Input.GetKeyDown(KeyCode.Space) && Mathf.Abs(rb.velocity.y) < 0.001f)
-            {
-                Attack();
-                nextAttackTime = Time.time + 1f / attackRate;
-            }
-        }
-
         if (currentHealth <= 0)
         {
             animator.SetBool("IsDead", true);

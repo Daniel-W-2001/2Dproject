@@ -153,7 +153,7 @@ namespace ScriptableObjects.ScriptableEnemy.Scripts
             Collider2D colInfo = Physics2D.OverlapCircle(pos, attackRange, attackMask);
             if (colInfo != null)
             {
-                colInfo.GetComponent<PlayerCombat>().TakeDamage(attackDamage);
+                colInfo.GetComponent<PlayerCombat>()?.TakeDamage(attackDamage);
             }
         }
 

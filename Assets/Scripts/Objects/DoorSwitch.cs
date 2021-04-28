@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DoorSwitch : MonoBehaviour
 {
@@ -15,7 +16,9 @@ public class DoorSwitch : MonoBehaviour
 
     public AudioSource leverSound;
 
-    public Joystick joystick;
+    public Button ib;
+    public GameObject interactButton;
+    public GameObject jumpButton;
 
     private void Start()
     {
@@ -23,11 +26,15 @@ public class DoorSwitch : MonoBehaviour
         leverOn.SetActive(false);
         text = textPopup.GetComponent<MeshRenderer>();
         text.enabled = false;
+        Button btn = ib.GetComponent<Button>();
+        btn.onClick.AddListener(TaskOnClick);
     }
     void OnTriggerStay2D(Collider2D hitBox)
     {
         if (hitBox.tag == "Player")
         {
+            interactButton.SetActive(true);
+            jumpButton.SetActive(false);
             radius = true;
             text.enabled = true;
         }
@@ -36,33 +43,33 @@ public class DoorSwitch : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            interactButton.SetActive(false);
+            jumpButton.SetActive(true);
             radius = false;
             text.enabled = false;
         }
     }
-    private void Update()
+
+    public void TaskOnClick()
     {
         if ((radius == true) && (open == false))
-            if (joystick.Vertical <= -.5f)
-            {
-                leverOn.SetActive(true);
-                leverOff.SetActive(false);
-                doorOpen.SetActive(true);
-                doorClosed.SetActive(false);
-                leverSound.Play();
-                Invoke("Open", 1);
-            }
-
+        {
+            leverOn.SetActive(true);
+            leverOff.SetActive(false);
+            doorOpen.SetActive(true);
+            doorClosed.SetActive(false);
+            leverSound.Play();
+            Invoke("Open", 1);
+        }
         if ((radius == true) && (open == true))
-            if (joystick.Vertical <= -.5f)
-            {
-                leverOn.SetActive(false);
-                leverOff.SetActive(true);
-                doorOpen.SetActive(false);
-                doorClosed.SetActive(true);
-                leverSound.Play();
-                Invoke("Closed", 1);
-            }
+        {
+            leverOn.SetActive(false);
+            leverOff.SetActive(true);
+            doorOpen.SetActive(false);
+            doorClosed.SetActive(true);
+            leverSound.Play();
+            Invoke("Closed", 1);
+        }
     }
     void Open()
     {
