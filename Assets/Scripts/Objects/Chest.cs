@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Chest : MonoBehaviour
 {
@@ -17,17 +18,26 @@ public class Chest : MonoBehaviour
 
     public AudioSource chestSound;
 
+    public Button ib;
+    public GameObject interactButton;
+    public GameObject jumpButton;
+
 
     private void Start()
     {
         chestOpen.SetActive(false);
         text = textPopup.GetComponent<MeshRenderer>();
         text.enabled = false;
+        Button btn = ib.GetComponent<Button>();
+        btn.onClick.AddListener(TaskOnClick);
+
     }
     void OnTriggerStay2D(Collider2D hitBox)
     {
         if (hitBox.tag == "Player")
         {
+            interactButton.SetActive(true);
+            jumpButton.SetActive(false);
             radius = true;
             text.enabled = true;
         }
@@ -36,13 +46,16 @@ public class Chest : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            interactButton.SetActive(false);
+            jumpButton.SetActive(true);
             radius = false;
             text.enabled = false;
         }
     }
-    private void Update()
+
+    void TaskOnClick()
     {
-        if ((radius == true) && Input.GetKeyDown(KeyCode.S) && (open == false))
+        if ((radius == true) && (open == false))
         {
             chestOpen.SetActive(true);
             chestClosed.SetActive(false);
@@ -56,6 +69,6 @@ public class Chest : MonoBehaviour
                 Destroy(effect, 1);
                 hasPlayed = true;
             }
-        }
+        }     
     }
 }

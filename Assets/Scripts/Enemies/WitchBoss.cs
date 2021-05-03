@@ -6,8 +6,10 @@ public class WitchBoss : MonoBehaviour
 {
     public Transform player;
     public bool isFlipped = false;
+    public bool bossDead = false;
 
     float attackRange = 20f;
+    float finalAttackRange = 11f;
     public Animator animator;
 
     float stage2AttackRate = 0.3f;
@@ -99,7 +101,7 @@ public class WitchBoss : MonoBehaviour
             transform.position = point3.transform.position;
         }
 
-        if ((Vector2.Distance(transform.position, player.position) <= attackRange) && (Time.time >= nextAttackTime) && (currentHealth > 0) && (point3done == true))
+        if ((Vector2.Distance(transform.position, player.position) <= finalAttackRange) && (Time.time >= nextAttackTime) && (currentHealth > 0) && (point3done == true))
         {
             animator.SetTrigger("Attack");
             PowerShoot();
@@ -149,6 +151,7 @@ public class WitchBoss : MonoBehaviour
         {
             var effect = (GameObject)Instantiate(deathEffect, effectPoint.transform.position, Quaternion.identity);
             Destroy(effect, 2);
+            bossDead = true;
             hasPlayed = true;
             //GetComponent<Collider2D>().enabled = false;
             this.gameObject.SetActive(false);

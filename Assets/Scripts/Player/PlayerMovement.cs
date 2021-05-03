@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    
+    float movement = 0f;
     public float movementSpeed = 1f;
     public float jumpForce = 1f;
 
@@ -12,15 +12,30 @@ public class PlayerMovement : MonoBehaviour
 
     public AudioSource jumpSound;
 
+    public Joystick joystick;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     private void Update()
     {
         //Player Movement
-        var movement = Input.GetAxis("Horizontal");
+        //var movement = Input.GetAxis("Horizontal");
+        if (joystick.Horizontal >= .4f)
+        {
+            movement = movementSpeed;
+        } 
+        else if (joystick.Horizontal <= -.4f)
+        {
+            movement = -movementSpeed;
+        }
+        else
+        {
+            movement = 0f;
+        }
         transform.position += new Vector3(movement, 0, 0) * Time.deltaTime * movementSpeed;
 
         animator.SetFloat("Speed", Mathf.Abs(movement));
@@ -34,17 +49,20 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.rotation = Quaternion.Euler(0, 180, 0);
         }
+        if (Mathf.Abs(rb.velocity.y) < 0.001f)
+        {
+            animator.SetBool("IsJumping", false);
+        }
+    }
 
-        //Player Jump
-        if (Input.GetButtonDown("Jump") && Mathf.Abs(rb.velocity.y) < 0.001f)
+    public void Jump()
+    {
+        //if (Input.GetButtonDown("Jump") && Mathf.Abs(rb.velocity.y) < 0.001f)
+        if (Mathf.Abs(rb.velocity.y) < 0.001f)
         {
             rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
             jumpSound.Play();
             animator.SetBool("IsJumping", true);
-        }
-        if (Mathf.Abs(rb.velocity.y) < 0.001f)
-        {
-            animator.SetBool("IsJumping", false);
         }
     }
 }

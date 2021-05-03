@@ -166,10 +166,10 @@ AudioSource:
   m_GameObject: {fileID: 4373476076975550868}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -1939208350284049346, guid: 839cf7bf574dbbe40abefc4183d9b9a0, type: 2}
   m_audioClip: {fileID: 8300000, guid: b7a64619a8a51214b84a74a2be9a86a5, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -272,6 +272,7 @@ MonoBehaviour:
   chestEffect: {fileID: 1845240806346120, guid: b395d5d6eb4b4b846acc021ee036b744, type: 3}
   effectPoint: {fileID: 1991037890}
   chestSound: {fileID: 4373476076975550875}
+  joystick: {fileID: 0}
 --- !u!1 &5615339669139407230
 GameObject:
   m_ObjectHideFlags: 0
