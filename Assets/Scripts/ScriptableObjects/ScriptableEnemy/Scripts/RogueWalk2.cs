@@ -25,8 +25,8 @@ public class RogueWalk2 : StateMachineBehaviour
     {
         enemy.LookAtPlayer();
 
-        Vector2 target = new Vector2(player2.position.x, rb.position.y);
-        Vector2 newPos = Vector2.MoveTowards(rb.position, target, speed * Time.fixedDeltaTime);
+        Vector2 target = new Vector2(player2.position.x, player2.position.y);
+        Vector2 newPos = Vector2.MoveTowards(new Vector2(rb.position.x, rb.position.y), target, speed * Time.fixedDeltaTime);
         rb.MovePosition(newPos);
 
         if (Vector2.Distance(player2.position, rb.position) <= attackRange)
