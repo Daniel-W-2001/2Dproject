@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 153950705840117680}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -47.07523, y: 7.0714703, z: 11.25506}
+  m_LocalPosition: {x: -47.07523, y: 7.0714703, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5133371757831748460}
@@ -111,7 +111,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 153950705840117680}
-  m_Text: Press S
+  m_Text: Interact
   m_OffsetZ: 0
   m_CharacterSize: 0.13
   m_LineSpacing: 1
@@ -141,10 +141,9 @@ MonoBehaviour:
   doorSound: {fileID: 153950705840117326}
   player: {fileID: 0}
   door2: {fileID: 0}
-  doorCooldown: 0
-  joystick: {fileID: 0}
-  button: {fileID: 0}
-  timerCountDown: 0.5
+  ib: {fileID: 0}
+  interactButton: {fileID: 0}
+  jumpButton: {fileID: 0}
 --- !u!82 &153950705840117326
 AudioSource:
   m_ObjectHideFlags: 0

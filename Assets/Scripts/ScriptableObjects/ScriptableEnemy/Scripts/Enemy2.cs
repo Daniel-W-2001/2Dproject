@@ -76,7 +76,9 @@ namespace ScriptableObjects.ScriptableEnemy.Scripts
             SetSprites();
         }
 
-        void SetObjects()
+    
+
+    void SetObjects()
         {
             // Could probably get a loop to do this but this should work just fiiinnneee (Also i didn't find out how)
             enemyHead = scriptEnemy.enemyHead;
@@ -159,13 +161,14 @@ namespace ScriptableObjects.ScriptableEnemy.Scripts
 
         void OnTriggerStay2D(Collider2D hitBox)
         {
-            Rigidbody2D rb = hitBox.GetComponent<Rigidbody2D>();
-            if (rb != null)
-            {
-                animator.SetBool("Radius", true);
+            if (hitBox.CompareTag("Player")){
+                Rigidbody2D rb = hitBox.GetComponent<Rigidbody2D>();
+                if (rb != null)
+                {
+                    animator.SetBool("Radius", true);
+                }
             }
 
-            
         }
         private void OnTriggerExit2D(Collider2D other)
         {
@@ -176,21 +179,23 @@ namespace ScriptableObjects.ScriptableEnemy.Scripts
             }
         }
 
-        private void OnTriggerEnter2D(Collider2D hitBox)
-        {
-            if (hitBox.CompareTag("TilemapHitbox") == boxCollider2D.isTrigger) 
-            {
-                Debug.Log("Blocked");
-                if (isFlipped)
-                {
-                    gameObject.transform.position = new Vector3(transform.position.x - .1f, transform.position.y);
-                }
-                else
-                {
-                    gameObject.transform.position = new Vector3(transform.position.x + .1f, transform.position.y);
-                }
-            }
-        }
+        // private void OnTriggerEnter2D(Collider2D hitBox)
+        // {
+        //     if (hitBox.CompareTag("TilemapHitbox") == boxCollider2D.isTrigger) 
+        //     {
+        //         Debug.Log("Blocked");
+        //         var position = transform.position;
+        //         if (isFlipped)
+        //         {
+        //             
+        //             gameObject.transform.position = new Vector3(position.x - .1f, position.y);
+        //         }
+        //         else
+        //         {
+        //             gameObject.transform.position = new Vector3(transform.position.x + .1f, position.y);
+        //         }
+        //     }
+        // }
 
         public void LookAtPlayer()
         {

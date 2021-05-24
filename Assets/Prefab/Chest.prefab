@@ -117,7 +117,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4373476076975550868}
-  m_Text: Press S
+  m_Text: Interact
   m_OffsetZ: 0
   m_CharacterSize: 0.01
   m_LineSpacing: 1
@@ -272,7 +272,9 @@ MonoBehaviour:
   chestEffect: {fileID: 1845240806346120, guid: b395d5d6eb4b4b846acc021ee036b744, type: 3}
   effectPoint: {fileID: 1991037890}
   chestSound: {fileID: 4373476076975550875}
-  joystick: {fileID: 0}
+  ib: {fileID: 0}
+  interactButton: {fileID: 0}
+  jumpButton: {fileID: 0}
 --- !u!1 &5615339669139407230
 GameObject:
   m_ObjectHideFlags: 0
