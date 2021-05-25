@@ -71,6 +71,7 @@ public class PlayerCombat : MonoBehaviour
             enemy.GetComponent<Enemy2>()?.TakeDamage(attackDamage);
             enemy.GetComponent<Witch>()?.TakeDamage(attackDamage);
             enemy.GetComponent<WitchBoss>()?.TakeDamage(attackDamage);
+                enemy.GetComponent<MiniBossScript>()?.TakeDamage(attackDamage);
             }
         }
     }
