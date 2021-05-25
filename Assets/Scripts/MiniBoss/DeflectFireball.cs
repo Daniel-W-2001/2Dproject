@@ -24,5 +24,12 @@ public class DeflectFireball : MonoBehaviour
             Destroy(gameObject);
             Destroy(boom, 1f);
         }
+
+        Barrel barrel = hitInfo.GetComponent<Barrel>();
+        if (barrel != null)
+        {
+            barrel.Explode();
+            Destroy(gameObject);
+        }
     }
 }
