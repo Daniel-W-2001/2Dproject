@@ -10,7 +10,7 @@ public class MiniBossScript : MonoBehaviour
     public int maxHealth = 500;
     public int currentHealth;
     public Canvas canvas;
-    public HealthBar healthBar;
+    public MiniBossHealthBar healthBar;
     public bool miniBossDead = false;
 
     public Transform player;
@@ -80,7 +80,7 @@ public class MiniBossScript : MonoBehaviour
         Collider2D colInfo = Physics2D.OverlapCircle(pos, attackRange, attackMask);
         if (colInfo != null)
         {
-            colInfo.GetComponent<PlayerCombat>()?.TakeDamage(attackDamage);
+            colInfo.GetComponent<PlayerCombat>()?.TakeKnockback(attackDamage);
         }
     }
 
