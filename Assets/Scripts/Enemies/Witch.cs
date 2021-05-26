@@ -71,6 +71,7 @@ public class Witch : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        StartCoroutine(DamageEffect());
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
 
@@ -80,6 +81,20 @@ public class Witch : MonoBehaviour
         if (currentHealth <= 0)
         {
             Die();
+        }
+    }
+    IEnumerator DamageEffect()
+    {
+        SetAllSpriteColours(Color.red);
+        yield return new WaitForSeconds(.2f);
+        SetAllSpriteColours(Color.white);
+    }
+
+    void SetAllSpriteColours(Color col)
+    {
+        foreach (var sr in GetComponentsInChildren<SpriteRenderer>())
+        {
+            sr.color = col;
         }
     }
 

@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 namespace ScriptableObjects.ScriptableEnemy.Scripts
@@ -218,6 +219,7 @@ namespace ScriptableObjects.ScriptableEnemy.Scripts
 
         public void TakeDamage(int damage)
         {
+            StartCoroutine(DamageEffect());
             currentHealth -= damage;
             healthBar.SetHealth(currentHealth);
 
@@ -227,6 +229,20 @@ namespace ScriptableObjects.ScriptableEnemy.Scripts
             if (currentHealth <= 0)
             {
                 Die();
+            }
+        }
+        IEnumerator DamageEffect()
+        {
+            SetAllSpriteColours(Color.red);
+            yield return new WaitForSeconds(.2f);
+            SetAllSpriteColours(Color.white);
+        }
+
+        void SetAllSpriteColours(Color col)
+        {
+            foreach (var sr in GetComponentsInChildren<SpriteRenderer>())
+            {
+                sr.color = col;
             }
         }
 
