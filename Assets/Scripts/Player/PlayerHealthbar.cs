@@ -3,10 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HealthBar : MonoBehaviour
+public class PlayerHealthbar : MonoBehaviour
 {
-	public Transform characterParent;
-
 	public Slider slider;
 	public Gradient gradient;
 	public Image fill;
@@ -25,9 +23,4 @@ public class HealthBar : MonoBehaviour
 
 		fill.color = gradient.Evaluate(slider.normalizedValue);
 	}
-
-    private void LateUpdate()
-    {
-		GetComponent<RectTransform>().localScale = new Vector3(-characterParent.right.x, 1, 1);
-    }
 }

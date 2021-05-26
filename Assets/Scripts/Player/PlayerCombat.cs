@@ -16,7 +16,7 @@ public class PlayerCombat : MonoBehaviour
 
     public int maxHealth = 100;
     public int currentHealth;
-    public HealthBar healthBar;
+    public PlayerHealthbar healthBar;
     public GameObject potionPickup;
     public AudioSource healSound;
 
