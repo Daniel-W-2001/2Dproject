@@ -44,6 +44,15 @@ public class FireballScript : MonoBehaviour
             Destroy(boom, 0.5f);
         }
 
+        MiniBossScript miniBoss = hitInfo.GetComponent<MiniBossScript>();
+        if (miniBoss != null)
+        {
+            miniBoss.Deflect();
+            //var boom = Instantiate(explosion, transform.position, transform.rotation);
+            Destroy(gameObject);
+            //Destroy(boom, 0.5f);
+        }
+
         Barrel barrel = hitInfo.GetComponent<Barrel>();
         if (barrel != null)
         {
