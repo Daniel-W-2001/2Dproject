@@ -59,5 +59,11 @@ public class FireballScript : MonoBehaviour
             barrel.Explode();
             Destroy(gameObject);
         }
+
+        Torch torch = hitInfo.GetComponent<Torch>();
+        if (torch != null)
+        {
+            torch.Ignite();
+        }
     }
 }

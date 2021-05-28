@@ -103,6 +103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c30753f69b290d64e98640158f268eac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterParent: {fileID: 4112400728996095841}
   slider: {fileID: 122463180041296891}
   gradient:
     serializedVersion: 2
@@ -622,7 +623,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scriptEnemy: {fileID: 11400000, guid: 05b3668c361fb3b4e9e2a372285681ea, type: 2}
-  animController: {fileID: 0}
   player2: {fileID: 0}
   maxHealth: 100
   currentHealth: 0

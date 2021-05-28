@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HealthBar : MonoBehaviour
+public class MiniBossHealthBar : MonoBehaviour
 {
 	public Transform characterParent;
 
@@ -26,8 +26,8 @@ public class HealthBar : MonoBehaviour
 		fill.color = gradient.Evaluate(slider.normalizedValue);
 	}
 
-    private void LateUpdate()
-    {
-		GetComponent<RectTransform>().localScale = new Vector3(-characterParent.right.x, 1, 1);
-    }
+	private void LateUpdate()
+	{
+		GetComponent<RectTransform>().localScale = new Vector3(characterParent.right.x, 1, 1);
+	}
 }

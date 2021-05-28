@@ -16,7 +16,7 @@ public class PlayerCombat : MonoBehaviour
 
     public int maxHealth = 100;
     public int currentHealth;
-    public HealthBar healthBar;
+    public PlayerHealthbar healthBar;
     public GameObject potionPickup;
     public AudioSource healSound;
 
@@ -25,6 +25,7 @@ public class PlayerCombat : MonoBehaviour
 
     private bool grounded = true;
     private bool cooldown = false;
+    public bool stunned = false;
 
     void Start()
     {
@@ -83,8 +84,49 @@ public class PlayerCombat : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        StartCoroutine(DamageEffect());
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
+    }
+    public void TakeKnockback(int damage)
+    {
+        stunned = true;
+        rb.AddForce(new Vector2(0, 10f), ForceMode2D.Impulse);
+        StartCoroutine(DamageEffect());
+        animator.SetTrigger("Knockback");
+        Invoke("ResetKnockback", 1f);
+        currentHealth -= damage;
+        healthBar.SetHealth(currentHealth);
+        if (transform.rotation == Quaternion.Euler(0, 0, 0))
+        {
+            rb.AddForce(new Vector2(transform.position.x * 5f, 0));
+            Debug.Log("NOOO");
+        }
+        else if (transform.rotation == Quaternion.Euler(0, -180, 0))
+        {
+            rb.AddForce(new Vector2(transform.position.x * -5f, 0));
+            Debug.Log("YES");
+        }
+    }
+
+    void ResetKnockback()
+    {
+        animator.ResetTrigger("Knockback");
+        stunned = false;
+    }
+    IEnumerator DamageEffect()
+    {
+        SetAllSpriteColours(Color.red);
+        yield return new WaitForSeconds(.2f);
+        SetAllSpriteColours(Color.white);
+    }
+
+    void SetAllSpriteColours(Color col)
+    {
+        foreach (var sr in GetComponentsInChildren<SpriteRenderer>())
+        {
+            sr.color = col;
+        }
     }
 
     public void Potion()
