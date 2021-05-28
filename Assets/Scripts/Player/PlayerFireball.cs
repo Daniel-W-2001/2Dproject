@@ -15,6 +15,8 @@ public class PlayerFireball : MonoBehaviour
     public float attackRate = 2f;
     float nextAttackTime = 0f;
 
+    public PlayerCombat combatScript;
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -35,7 +37,7 @@ public class PlayerFireball : MonoBehaviour
 
     public void Shoot()
     {
-        if (cooldown == false)
+        if (cooldown == false && combatScript.stunned == false)
         {
             animator.SetBool("IsJumping", false);
             animator.SetTrigger("CastFireball");

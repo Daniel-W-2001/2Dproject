@@ -88,24 +88,22 @@ public class PlayerCombat : MonoBehaviour
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
     }
-    public void TakeKnockback(int damage)
+    public void TakeKnockback()
     {
         stunned = true;
-        rb.AddForce(new Vector2(0, 10f), ForceMode2D.Impulse);
-        StartCoroutine(DamageEffect());
+        animator.ResetTrigger("Attack");
         animator.SetTrigger("Knockback");
         Invoke("ResetKnockback", 1f);
-        currentHealth -= damage;
-        healthBar.SetHealth(currentHealth);
+
+        rb.AddForce(new Vector2(0, 10f), ForceMode2D.Impulse);
+
         if (transform.rotation == Quaternion.Euler(0, 0, 0))
         {
             rb.AddForce(new Vector2(transform.position.x * 5f, 0));
-            Debug.Log("NOOO");
         }
         else if (transform.rotation == Quaternion.Euler(0, -180, 0))
         {
             rb.AddForce(new Vector2(transform.position.x * -5f, 0));
-            Debug.Log("YES");
         }
     }
 
