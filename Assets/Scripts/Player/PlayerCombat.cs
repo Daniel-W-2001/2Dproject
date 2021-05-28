@@ -23,6 +23,9 @@ public class PlayerCombat : MonoBehaviour
     public AudioSource swordSwing;
     public GameObject respawnPoint;
 
+    public GameObject collectEffect;
+    public AudioSource collectSound;
+
     private bool grounded = true;
     private bool cooldown = false;
     public bool stunned = false;
@@ -135,7 +138,12 @@ public class PlayerCombat : MonoBehaviour
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
     }
-
+    public void GemCollectible()
+    {
+        var heal = Instantiate(collectEffect, transform.position, transform.rotation);
+        collectSound.Play();
+        Destroy(heal, 3f);
+    }
     void Die()
     {
         animator.SetBool("IsDead", false);

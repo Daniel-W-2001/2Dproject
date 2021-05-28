@@ -32,6 +32,7 @@ public class GemCollectible : MonoBehaviour
         PlayerCombat player = col.GetComponent<PlayerCombat>();
         if (player != null)
         {
+            player.GemCollectible();
             gem.SetActive(true);
             Destroy(gameObject);
         }
