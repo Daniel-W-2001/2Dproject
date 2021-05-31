@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    [Space] 
+    public bool usedAfterDeath = false;
+    public int destroyTime = 2;
+    [Space]
+    
     public Animator animator;
 
     public int maxHealth = 100;
@@ -62,5 +67,17 @@ public class Enemy : MonoBehaviour
         //Disable enemy
         GetComponent<Collider2D>().enabled = false;
         this.enabled = false;
+        if (!usedAfterDeath)
+        {
+            StartCoroutine(Decay(destroyTime));
+        }
+    }
+    
+    IEnumerator Decay(int time)
+    {
+        yield return new WaitForSeconds(destroyTime);
+        Debug.Log(gameObject.name + " was destroyed to save memory");
+        Destroy(gameObject);
+        // Kan være lurt å slette gameObject hvis det ikke skal brukes igjen
     }
 }

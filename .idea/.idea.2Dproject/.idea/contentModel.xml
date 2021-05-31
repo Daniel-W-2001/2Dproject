@@ -75,6 +75,9 @@
         <e p="Scripts" t="Include">
           <e p="Camera" t="Include">
             <e p="CameraFollow.cs" t="Include" />
+            <e p="FollowCam.cs" t="Include" />
+            <e p="FollowCam2.cs" t="Include" />
+            <e p="FollowCam3.cs" t="Include" />
             <e p="MiniBossCam.cs" t="Include" />
             <e p="StaticCam.cs" t="Include" />
           </e>
@@ -122,6 +125,7 @@
             <e p="Lever2.cs" t="Include" />
             <e p="Lever3.cs" t="Include" />
             <e p="PuzzleDoor.cs" t="Include" />
+            <e p="TorchTrap.cs" t="Include" />
           </e>
           <e p="ScriptableObjects" t="Include">
             <e p="Dialogue" t="Include">

@@ -10,6 +10,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PuzzleFolder/TorchTrap.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -24,15 +27,17 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/ScriptableEnemy/Scripts/SpriteScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/ScriptableEnemy/Scripts/EnemySprites.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/ScriptableEnemy/Scripts/EnemyObject.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Enemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerCombat.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Door.cs" />
         <option value="$PROJECT_DIR$/Assets/PlayMusic.cs" />
         <option value="$PROJECT_DIR$/Assets/TileCrumble.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/ScriptableEnemy/Scripts/Enemy2.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/ScriptableEnemy/Scripts/RogueWalk2.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/Dialogue/Scripts/TextLoader.cs" />
         <option value="$PROJECT_DIR$/Assets/TriggerWaves.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PuzzleFolder/TorchTrap.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Witch.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/ScriptableEnemy/Scripts/Enemy2.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Enemy.cs" />
       </list>
     </option>
   </component>
@@ -82,6 +87,7 @@
       <workItem from="1616417560924" duration="2805000" />
       <workItem from="1621425365767" duration="1966000" />
       <workItem from="1622191270110" duration="6948000" />
+      <workItem from="1622463246929" duration="4178000" />
     </task>
     <servers />
   </component>
@@ -98,10 +104,11 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="694" y="342" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1080/-1680.10.1680.1050@0.0.1920.1080" timestamp="1614286844955" />
-    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1616418927372">
+    <state x="-13" y="267" width="672" height="678" key="search.everywhere.popup" timestamp="1622463777157">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/-1680.10.1680.1050@0.0.1920.1080" timestamp="1616418927372" />
+    <state x="-13" y="267" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/-1680.39.1680.1050@0.0.1920.1080" timestamp="1622463777157" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
