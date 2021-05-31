@@ -1,20 +1,20 @@
 using Cinemachine;
 using UnityEngine;
 
-public class FollowCam : MonoBehaviour
+public class FollowCam2 : MonoBehaviour
 {
-    public CinemachineVirtualCamera cam;
+    public CinemachineVirtualCamera cam2;
 
     private void Start()
     {
-        cam.enabled = false;
+        cam2.enabled = false;
     }
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Player")
         {
-            cam.transform.position = transform.position + new Vector3(0, 0, -10);
-            cam.enabled = true;
+            cam2.transform.position = transform.position + new Vector3(0, 0, -10);
+            cam2.enabled = true;
         }
     }
 
@@ -22,7 +22,7 @@ public class FollowCam : MonoBehaviour
     {
         if (col.tag == "Player")
         {
-            cam.enabled = false;
+            cam2.enabled = false;
         }
     }
 
