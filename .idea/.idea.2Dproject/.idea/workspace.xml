@@ -34,10 +34,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/ScriptableEnemy/Scripts/RogueWalk2.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/Dialogue/Scripts/TextLoader.cs" />
         <option value="$PROJECT_DIR$/Assets/TriggerWaves.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Witch.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/ScriptableEnemy/Scripts/Enemy2.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Enemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PuzzleFolder/TorchTrap.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Witch.cs" />
       </list>
     </option>
   </component>
@@ -87,7 +87,7 @@
       <workItem from="1616417560924" duration="2805000" />
       <workItem from="1621425365767" duration="1966000" />
       <workItem from="1622191270110" duration="6948000" />
-      <workItem from="1622463246929" duration="10853000" />
+      <workItem from="1622463246929" duration="12670000" />
     </task>
     <servers />
   </component>

@@ -7,7 +7,7 @@ public class Witch : MonoBehaviour
     public Transform player;
     public bool isFlipped = false;
 
-    float attackRange = 10f;
+    public float attackRange = 10f;
     public Animator animator;
 
     public float attackRate = 0.8f;
