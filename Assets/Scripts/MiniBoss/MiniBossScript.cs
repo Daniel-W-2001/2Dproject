@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MiniBossScript : MonoBehaviour
 {
+    private Rigidbody2D rb;
     public Animator animator;
     public MiniBossCam radiusScript;
 
@@ -28,9 +29,12 @@ public class MiniBossScript : MonoBehaviour
     public AudioSource deflectSound;
 
     static int stunCount = 0;
+    public PlayerCombat playerCombat;
+
 
     void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
     }
@@ -80,7 +84,7 @@ public class MiniBossScript : MonoBehaviour
         Collider2D colInfo = Physics2D.OverlapCircle(pos, attackRange, attackMask);
         if (colInfo != null)
         {
-            colInfo.GetComponent<PlayerCombat>()?.TakeKnockback(attackDamage);
+            colInfo.GetComponent<PlayerCombat>()?.TakeDamage(attackDamage);
         }
     }
 
@@ -94,10 +98,12 @@ public class MiniBossScript : MonoBehaviour
         //Play hurt animation
         if (stunCount >= 3)
         {
-            animator.SetTrigger("Hurt");
+            animator.SetTrigger("Knockback");
+            playerCombat.TakeKnockback();
             stunCount = 0;
         }
     }
+
     IEnumerator DamageEffect()
     {
         SetAllSpriteColours(Color.red);

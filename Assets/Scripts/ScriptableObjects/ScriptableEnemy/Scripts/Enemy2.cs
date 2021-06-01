@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
+using System.Globalization;
 using UnityEngine;
+using UnityEngine.U2D;
 
 namespace ScriptableObjects.ScriptableEnemy.Scripts
 {
@@ -8,10 +10,17 @@ namespace ScriptableObjects.ScriptableEnemy.Scripts
     {
         private GameObject thisGameObject;
 
-        // Enemy Part
+
+        [Space] 
+        public bool usedAfterDeath = false;
+        public int destroyTime = 2;
+        [Space]
+        
+        
+        [Header("Enemy Part")]
         public EnemyObject scriptEnemy;
         private Animator animator;
-        //private AnimatorController animController;
+        
         public Transform player2;
 
         private BoxCollider2D boxCollider2D;
@@ -22,14 +31,17 @@ namespace ScriptableObjects.ScriptableEnemy.Scripts
         public Canvas canvas;
 
         private bool isFlipped = false;
-
-        // Enemy Attack Part
+        [Space]
+        
+        [Header("Enemy Attack Part")] 
+        
         private Vector3 attackOffset;
         private float attackRange;
         private LayerMask attackMask;
         private int attackDamage;
-
-        // EnemyLooks
+        [Space]
+        
+        // Enemy Looks
         private Sprite enemyHead;
         private Sprite enemyFace;
         private Sprite enemyHood;
@@ -48,7 +60,7 @@ namespace ScriptableObjects.ScriptableEnemy.Scripts
         private Sprite enemyLegR;
         private Sprite enemyPelvis;
 
-        
+        [Header("EnemyLooks")]
         public GameObject enemyHead_object;
         public GameObject enemyFace_object;
         public GameObject enemyHood_object;
@@ -66,7 +78,7 @@ namespace ScriptableObjects.ScriptableEnemy.Scripts
         public GameObject enemyBootR_object;
         public GameObject enemyLegR_object;
         public GameObject enemyPelvis_object;
-    
+        
 
     void Start()
         {
@@ -256,8 +268,19 @@ namespace ScriptableObjects.ScriptableEnemy.Scripts
             //Disable enemy
             GetComponent<Collider2D>().enabled = false;
             this.enabled = false;
+            
+            if (!usedAfterDeath)
+            {
+                StartCoroutine(Decay(destroyTime));
+            }
         }
-    
-    
+
+        IEnumerator Decay(int time)
+        {
+            yield return new WaitForSeconds(destroyTime);
+            Debug.Log(gameObject.name + " was destroyed to save memory");
+            Destroy(gameObject);
+            // Kan være lurt å slette gameObject hvis det ikke skal brukes igjen
+        }
     }
 }

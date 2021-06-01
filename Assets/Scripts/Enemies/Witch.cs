@@ -26,6 +26,8 @@ public class Witch : MonoBehaviour
     public GameObject deathEffect;
     public GameObject effectPoint;
     private bool hasPlayed = false;
+    
+    public bool usedAfterDeath = false;
 
     private void Start()
     {
@@ -116,6 +118,15 @@ public class Witch : MonoBehaviour
             hasPlayed = true;
             //GetComponent<Collider2D>().enabled = false;
             this.gameObject.SetActive(false);
+            if (!usedAfterDeath)
+            {
+                Debug.Log(gameObject.name + " was destroyed to save memory");
+                Destroy(gameObject);
+                // Kan være lurt å slette gameObject hvis det ikke skal brukes igjen
+            }
+            
         }
     }
+    
+
 }
