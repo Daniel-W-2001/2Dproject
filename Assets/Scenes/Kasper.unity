@@ -208,6 +208,11 @@ PrefabInstance:
       objectReference: {fileID: 1198552774}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
+--- !u!1 &1098148 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 153950705840117680, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
+  m_PrefabInstance: {fileID: 1098147}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2860077
 GameObject:
   m_ObjectHideFlags: 0
@@ -2258,7 +2263,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 116196022}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 57.821545, y: 11.50671, z: 70.71471}
+  m_LocalPosition: {x: 52.55, y: 5.73, z: 70.71471}
   m_LocalScale: {x: 1.2683, y: 1.2683, z: 1.2683}
   m_Children: []
   m_Father: {fileID: 1475231462}
@@ -27228,7 +27233,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 51.83114, y: 18.058542, z: -10}
+  m_LocalPosition: {x: 54.599922, y: 18.058542, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -28804,7 +28809,7 @@ PrefabInstance:
     - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
       propertyPath: door2
       value: 
-      objectReference: {fileID: 1380649049}
+      objectReference: {fileID: 1098148}
     - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
       propertyPath: button
       value: 
@@ -76998,7 +77003,7 @@ GameObject:
   - component: {fileID: 1559923313}
   - component: {fileID: 1559923312}
   m_Layer: 0
-  m_Name: PurpleGemEntry
+  m_Name: PurpleGemEntrySign
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77384,7 +77389,7 @@ PrefabInstance:
     - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
       propertyPath: door2
       value: 
-      objectReference: {fileID: 734089407}
+      objectReference: {fileID: 2130290500}
     - target: {fileID: 153950705840117683, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
       propertyPath: button
       value: 
@@ -86066,6 +86071,11 @@ PrefabInstance:
       objectReference: {fileID: 1198552774}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
+--- !u!1 &2130290500 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 153950705840117680, guid: d188c87aebef3d841ab8edaece51c541, type: 3}
+  m_PrefabInstance: {fileID: 2130290499}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2130671164
 GameObject:
   m_ObjectHideFlags: 0
