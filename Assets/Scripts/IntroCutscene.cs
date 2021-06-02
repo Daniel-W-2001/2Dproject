@@ -9,6 +9,10 @@ public class IntroCutscene : MonoBehaviour
     float timeLeft = 22f;
     public GameObject blackOutSquare;
 
+    public AudioSource audioSource;
+    float duration = 2f;
+    float targetVolume = 0f;
+
     private void Start()
     {
         StartCoroutine(FadeBlackOutSquare(false));
@@ -19,6 +23,7 @@ public class IntroCutscene : MonoBehaviour
         if (timeLeft < 0)
         {
             StartCoroutine(FadeBlackOutSquare());
+            StartCoroutine(FadeAudioSource.StartFade(audioSource, duration, targetVolume));
             Invoke("LoadScene", 2);
         }
     }
@@ -26,6 +31,7 @@ public class IntroCutscene : MonoBehaviour
     public void Skip()
     {
         StartCoroutine(FadeBlackOutSquare());
+        StartCoroutine(FadeAudioSource.StartFade(audioSource, duration, targetVolume));
         Invoke("LoadScene", 2);
     }
     void LoadScene()

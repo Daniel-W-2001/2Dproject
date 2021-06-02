@@ -536,6 +536,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blackOutSquare: {fileID: 2144319079}
+  audioSource: {fileID: 925147831}
 --- !u!4 &925147830
 Transform:
   m_ObjectHideFlags: 0
