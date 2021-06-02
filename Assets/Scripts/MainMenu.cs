@@ -6,6 +6,6 @@ public class MainMenu : MonoBehaviour
 
     public void PlayGame()
     {
-        SceneManager.LoadScene("Kasper");
+        SceneManager.LoadScene("Intro");
     }
 }
