@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using ScriptableObjects.ScriptableEnemy.Scripts;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerCombat : MonoBehaviour
 {
@@ -30,6 +31,8 @@ public class PlayerCombat : MonoBehaviour
     private bool cooldown = false;
     public bool stunned = false;
 
+    public GameObject blackOutSquare;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -44,6 +47,7 @@ public class PlayerCombat : MonoBehaviour
         {
             animator.SetBool("IsDead", true);
             Invoke("Die", 1);
+            StartCoroutine(FadeBlackOutSquare());
         }
 
         if (Mathf.Abs(rb.velocity.y) < 0.001f)
@@ -150,6 +154,36 @@ public class PlayerCombat : MonoBehaviour
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
         transform.position = respawnPoint.transform.position;
+        StartCoroutine(FadeBlackOutSquare(false));
+    }
+
+    public IEnumerator FadeBlackOutSquare(bool fadeToBlack = true, int fadeSpeed = 1)
+    {
+        Color objectColor = blackOutSquare.GetComponent<Image>().color;
+        float fadeAmount;
+
+        if (fadeToBlack)
+        {
+            while (blackOutSquare.GetComponent<Image>().color.a < 1)
+            {
+                fadeAmount = objectColor.a + (fadeSpeed * Time.deltaTime);
+
+                objectColor = new Color(objectColor.r, objectColor.g, objectColor.b, fadeAmount);
+                blackOutSquare.GetComponent<Image>().color = objectColor;
+                yield return null;
+            }
+        }
+        else
+        {
+            while (blackOutSquare.GetComponent<Image>().color.a > 0)
+            {
+                fadeAmount = objectColor.a - (fadeSpeed * Time.deltaTime);
+
+                objectColor = new Color(objectColor.r, objectColor.g, objectColor.b, fadeAmount);
+                blackOutSquare.GetComponent<Image>().color = objectColor;
+                yield return null;
+            }
+        }
     }
 
     private void OnDrawGizmosSelected()

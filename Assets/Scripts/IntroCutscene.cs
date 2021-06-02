@@ -9,6 +9,10 @@ public class IntroCutscene : MonoBehaviour
     float timeLeft = 22f;
     public GameObject blackOutSquare;
 
+    private void Start()
+    {
+        StartCoroutine(FadeBlackOutSquare(false));
+    }
     void Update()
     {
         timeLeft -= Time.deltaTime;
@@ -24,7 +28,7 @@ public class IntroCutscene : MonoBehaviour
             SceneManager.LoadScene("Kasper");
     }
 
-    public IEnumerator FadeBlackOutSquare(bool fadeToBlack = true, int fadeSpeed = 5)
+    public IEnumerator FadeBlackOutSquare(bool fadeToBlack = true, int fadeSpeed = 1)
     {
         Color objectColor = blackOutSquare.GetComponent<Image>().color;
         float fadeAmount;
