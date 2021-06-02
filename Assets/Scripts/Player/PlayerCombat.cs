@@ -26,6 +26,7 @@ public class PlayerCombat : MonoBehaviour
 
     public GameObject collectEffect;
     public AudioSource collectSound;
+    public AudioSource celebrationSound;
 
     private bool grounded = true;
     private bool cooldown = false;
@@ -144,9 +145,10 @@ public class PlayerCombat : MonoBehaviour
     }
     public void GemCollectible()
     {
-        var heal = Instantiate(collectEffect, transform.position, transform.rotation);
+        var fireworks = Instantiate(collectEffect, transform.position, transform.rotation);
         collectSound.Play();
-        Destroy(heal, 3f);
+        celebrationSound.Play();
+        Destroy(fireworks, 3f);
     }
     void Die()
     {
