@@ -541,6 +541,7 @@ Transform:
   - {fileID: 4112400729129078651}
   - {fileID: 122463181350326735}
   - {fileID: 122463181388343443}
+  - {fileID: 1941109133276443520}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
@@ -622,12 +623,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a61b96bcb2f430459f085a8da14a108, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usedAfterDeath: 0
+  destroyTime: 2
   scriptEnemy: {fileID: 11400000, guid: 05b3668c361fb3b4e9e2a372285681ea, type: 2}
   player2: {fileID: 0}
   maxHealth: 100
   currentHealth: 0
   healthBar: {fileID: 122463180041296890}
   canvas: {fileID: 122463181350326730}
+  deathEffect: {fileID: 100006, guid: 2a474af3f4c27be4e9bdce39cfe4315d, type: 3}
+  effectPoint: {fileID: 6453784187592507362}
   enemyHead_object: {fileID: 4116174404899473147}
   enemyFace_object: {fileID: 4116174407484074295}
   enemyHood_object: {fileID: 4116174407345790753}
@@ -2488,4 +2493,34 @@ Transform:
   - {fileID: 4112400727737020761}
   m_Father: {fileID: 4112400728237859843}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6453784187592507362
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1941109133276443520}
+  m_Layer: 7
+  m_Name: DeathPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1941109133276443520
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6453784187592507362}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4112400728996095841}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -31,6 +31,10 @@ namespace ScriptableObjects.ScriptableEnemy.Scripts
         public Canvas canvas;
 
         private bool isFlipped = false;
+
+        public GameObject deathEffect;
+        public GameObject effectPoint;
+        private bool hasPlayed = false;
         [Space]
         
         [Header("Enemy Attack Part")] 
@@ -261,6 +265,7 @@ namespace ScriptableObjects.ScriptableEnemy.Scripts
         void Die()
         {
             canvas.enabled = false;
+            Invoke("Disable", 2);
 
             //Die animation
             animator.SetBool("IsDead", true);
@@ -275,7 +280,17 @@ namespace ScriptableObjects.ScriptableEnemy.Scripts
             }
         }
 
-        IEnumerator Decay(int time)
+        void Disable()
+        {
+            if (!hasPlayed)
+            {
+                var effect = (GameObject)Instantiate(deathEffect, effectPoint.transform.position, Quaternion.identity);
+                Destroy(effect, 2);
+                hasPlayed = true;
+            }
+        }
+
+                IEnumerator Decay(int time)
         {
             yield return new WaitForSeconds(destroyTime);
             Debug.Log(gameObject.name + " was destroyed to save memory");
