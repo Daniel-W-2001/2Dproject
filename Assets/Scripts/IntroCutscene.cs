@@ -23,6 +23,11 @@ public class IntroCutscene : MonoBehaviour
         }
     }
 
+    public void Skip()
+    {
+        StartCoroutine(FadeBlackOutSquare());
+        Invoke("LoadScene", 2);
+    }
     void LoadScene()
     {
             SceneManager.LoadScene("Kasper");
