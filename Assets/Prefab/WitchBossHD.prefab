@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7321060985719841749}
   - component: {fileID: 7321060985719841748}
   - component: {fileID: 7321060985719841747}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Healthbar (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 7321060986241913298}
   - component: {fileID: 7321060986241913296}
   - component: {fileID: 7321060986241913297}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -246,7 +246,7 @@ GameObject:
   - component: {fileID: 7321060986393954971}
   - component: {fileID: 7321060986393954969}
   - component: {fileID: 7321060986393954970}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -321,7 +321,7 @@ GameObject:
   - component: {fileID: 7321060986702712344}
   - component: {fileID: 7321060986702712342}
   - component: {fileID: 7321060986702712343}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Heart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -396,7 +396,7 @@ GameObject:
   - component: {fileID: 7321060986890384708}
   - component: {fileID: 7321060986890384706}
   - component: {fileID: 7321060986890384707}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -474,9 +474,9 @@ GameObject:
   - component: {fileID: 7321060986903691680}
   - component: {fileID: 7321060986903691681}
   - component: {fileID: 7321060986903691708}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WitchBossHD
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -654,7 +654,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7321060987011937571}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Firepoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
