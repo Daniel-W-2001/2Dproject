@@ -52089,6 +52089,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WitchHD (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6172827343956712401, guid: 904a07a82be800e4485e56158ae58c86, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 769606503}
     - target: {fileID: 6172827344755855592, guid: 904a07a82be800e4485e56158ae58c86, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -91398,6 +91402,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WitchHD (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6172827343956712401, guid: 904a07a82be800e4485e56158ae58c86, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 769606503}
     - target: {fileID: 6172827344755855592, guid: 904a07a82be800e4485e56158ae58c86, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -91815,6 +91823,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WitchHD (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6172827343956712401, guid: 904a07a82be800e4485e56158ae58c86, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 769606503}
     - target: {fileID: 6172827344755855592, guid: 904a07a82be800e4485e56158ae58c86, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -105171,6 +105183,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WitchHD (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 6172827343956712401, guid: 904a07a82be800e4485e56158ae58c86, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 769606503}
     - target: {fileID: 6172827344755855592, guid: 904a07a82be800e4485e56158ae58c86, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -105356,6 +105372,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WitchHD (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6172827343956712401, guid: 904a07a82be800e4485e56158ae58c86, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 769606503}
     - target: {fileID: 6172827344755855592, guid: 904a07a82be800e4485e56158ae58c86, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0

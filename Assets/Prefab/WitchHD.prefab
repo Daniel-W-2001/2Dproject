@@ -669,7 +669,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c30753f69b290d64e98640158f268eac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterParent: {fileID: 0}
+  characterParent: {fileID: 6172827343956712398}
   slider: {fileID: 6172827345155226023}
   gradient:
     serializedVersion: 2
