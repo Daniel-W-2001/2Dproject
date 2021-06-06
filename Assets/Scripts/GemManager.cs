@@ -3,50 +3,31 @@ using UnityEngine;
 public class GemManager : MonoBehaviour
 {
 
-    public static GemManager instance;
+    public NonSceneDependent NonSceneDependentObject;
+
     
     public GameObject greenGem;
     public GameObject blueGem;
     public GameObject yellowGem;
     public GameObject purpleGem;
-    
-    public bool green = false;
-    public bool blue = false;
-    public bool yellow = false;
-    public bool purple = false;
-    
-    
-    private void Awake()
-    {
-        if (instance == null) instance = this;
-        else
-        {
-            Destroy(gameObject);
-            return;
-        }
-    }
 
-    private void Start()
-    {
-        DontDestroyOnLoad(this);
-    }
 
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         
          if (greenGem.activeSelf) {
-             green = true;
+             NonSceneDependentObject.green = true;
          }
          if (blueGem.activeSelf) {
-             blue = true;
+             NonSceneDependentObject.blue = true;
          }
          if (yellowGem.activeSelf) {
-             yellow = true;
+             NonSceneDependentObject.yellow = true;
          }
          if (purpleGem.activeSelf) {
-             purple = true;
+             NonSceneDependentObject.purple = true;
          }
         
         

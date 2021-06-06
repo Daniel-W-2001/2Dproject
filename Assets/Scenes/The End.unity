@@ -1579,7 +1579,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be162ffa236924646a368230405d9cae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GemManager: {fileID: 248003070826696644, guid: 5c389d1e2a8093746b8e80ebc8f6098f, type: 3}
+  gemBooleans: {fileID: 1433845169527021844, guid: 0e2ee376f561dd2469127362027e8caa, type: 3}
   greenGem: {fileID: 2020636819}
   blueGem: {fileID: 1402338878}
   yellowGem: {fileID: 1544302324}

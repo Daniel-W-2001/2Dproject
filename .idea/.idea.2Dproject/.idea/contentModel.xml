@@ -71,6 +71,7 @@
           <e p="pixel_snapping_README.txt" t="Include" />
         </e>
         <e p="MiniBossRun.cs" t="Include" />
+        <e p="NonSceneDependent.cs" t="Include" />
         <e p="PlayMusic.cs" t="Include" />
         <e p="RogueWalk.cs" t="Include" />
         <e p="Scripts" t="Include">
