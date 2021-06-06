@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class GemCollectible : MonoBehaviour
 {
+    
     public float amplitude = 0.15f;
     public float frequency = 1f;
 
@@ -37,4 +38,5 @@ public class GemCollectible : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    
 }
