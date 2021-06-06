@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Intro.unity
     guid: bade57cd0f0a08c4185d96186649930d
   - enabled: 1
-    path: Assets/Scenes/Kasper.unity
+    path: Assets/Scenes/Game.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/The End.unity
+    guid: db02e9f3e8627144389a1dfd263257fd
   m_configObjects: {}

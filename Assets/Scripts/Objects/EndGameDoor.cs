@@ -1,42 +1,62 @@
-using UnityEngine.SceneManagement;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
-public class IntroCutscene : MonoBehaviour
+public class EndGameDoor : MonoBehaviour
 {
-    float timeLeft = 22f;
-    public GameObject blackOutSquare;
+    bool radius;
+    public GameObject textPopup;
+    MeshRenderer text;
+    public AudioSource doorSound;
+    public GameObject player;
 
-    public AudioSource audioSource;
-    float duration = 2f;
-    float targetVolume = 0f;
+    public Button ib;
+    public GameObject interactButton;
+    public GameObject jumpButton;
+
+    public GameObject blackOutSquare;
 
     private void Start()
     {
-        StartCoroutine(FadeBlackOutSquare(false));
+        text = textPopup.GetComponent<MeshRenderer>();
+        text.enabled = false;
+        Button btn = ib.GetComponent<Button>();
+        btn.onClick.AddListener(TaskOnClick);
     }
-    void Update()
+    void OnTriggerStay2D(Collider2D hitBox)
     {
-        timeLeft -= Time.deltaTime;
-        if (timeLeft < 0)
+        if (hitBox.tag == "Player")
+        {
+            interactButton.SetActive(true);
+            jumpButton.SetActive(false);
+            radius = true;
+            text.enabled = true;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.tag == "Player")
+        {
+            interactButton.SetActive(false);
+            jumpButton.SetActive(true);
+            radius = false;
+            text.enabled = false;
+        }
+    }
+    public void TaskOnClick()
+    {
+        if (radius == true)
         {
             StartCoroutine(FadeBlackOutSquare());
-            StartCoroutine(FadeAudioSource.StartFade(audioSource, duration, targetVolume));
             Invoke("LoadScene", 2);
+            doorSound.Play();
         }
     }
 
-    public void Skip()
-    {
-        StartCoroutine(FadeBlackOutSquare());
-        StartCoroutine(FadeAudioSource.StartFade(audioSource, duration, targetVolume));
-        Invoke("LoadScene", 2);
-    }
     void LoadScene()
     {
-            SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("The End");
     }
 
     public IEnumerator FadeBlackOutSquare(bool fadeToBlack = true, int fadeSpeed = 1)
