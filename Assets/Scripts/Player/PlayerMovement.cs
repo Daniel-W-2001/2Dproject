@@ -24,11 +24,11 @@ public class PlayerMovement : MonoBehaviour
     {
         //Player Movement
         //var movement = Input.GetAxis("Horizontal");
-        if (joystick.Horizontal >= .4f)
+        if (joystick.Horizontal >= .2f)
         {
             movement = movementSpeed;
         } 
-        else if (joystick.Horizontal <= -.4f)
+        else if (joystick.Horizontal <= -.2f)
         {
             movement = -movementSpeed;
         }
