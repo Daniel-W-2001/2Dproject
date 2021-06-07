@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class GemManager : MonoBehaviour
 {
-
+    
     public NonSceneDependent NonSceneDependentObject;
 
     
@@ -32,4 +32,6 @@ public class GemManager : MonoBehaviour
         
         
     }
+
+    
 }
