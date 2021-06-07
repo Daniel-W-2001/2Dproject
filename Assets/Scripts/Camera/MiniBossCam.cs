@@ -6,7 +6,6 @@ public class MiniBossCam : MonoBehaviour
 
     public AudioClip newTrack;
     private MusicManager musicManager;
-    public bool miniBossMusic = false;
 
     private void Start()
     {
@@ -20,10 +19,9 @@ public class MiniBossCam : MonoBehaviour
             Camera.main.transform.position = transform.position + new Vector3(0, 0, -10);
             miniBossRadius = true;
 
-            if(newTrack != null && miniBossMusic == false)
+            if(newTrack != null)
             {
                 musicManager.ChangeMusic(newTrack);
-                miniBossMusic = true;
             }
         }
     }

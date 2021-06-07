@@ -6,7 +6,6 @@ public class WitchBossCam : MonoBehaviour
 {
     public AudioClip newTrack;
     private MusicManager musicManager;
-    bool bossMusic = false;
 
     void Start()
     {
@@ -19,10 +18,9 @@ public class WitchBossCam : MonoBehaviour
         {
             Camera.main.transform.position = transform.position + new Vector3(0, 0, -10);
 
-            if (newTrack != null && bossMusic == false)
+            if (newTrack != null)
             {
                 musicManager.ChangeMusic(newTrack);
-                bossMusic = true;
             }
         }
     }

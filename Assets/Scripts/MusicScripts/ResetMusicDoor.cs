@@ -19,8 +19,6 @@ public class ResetMusicDoor : MonoBehaviour
     public AudioClip newTrack;
     private MusicManager musicManager;
 
-    public MiniBossCam mbScript;
-
     private void Start()
     {
         text = textPopup.GetComponent<MeshRenderer>();
@@ -59,7 +57,6 @@ public class ResetMusicDoor : MonoBehaviour
             if (newTrack != null)
             {
                 musicManager.ChangeMusic(newTrack);
-                mbScript.miniBossMusic = false;
             }
         }
     }
