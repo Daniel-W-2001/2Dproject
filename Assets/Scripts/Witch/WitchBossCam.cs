@@ -1,14 +1,14 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class MiniBossCam : MonoBehaviour
+public class WitchBossCam : MonoBehaviour
 {
-    public bool miniBossRadius = false;
-
     public AudioClip newTrack;
     private MusicManager musicManager;
-    public bool miniBossMusic = false;
+    bool bossMusic = false;
 
-    private void Start()
+    void Start()
     {
         musicManager = FindObjectOfType<MusicManager>();
     }
@@ -18,20 +18,12 @@ public class MiniBossCam : MonoBehaviour
         if (other.tag == "Player")
         {
             Camera.main.transform.position = transform.position + new Vector3(0, 0, -10);
-            miniBossRadius = true;
 
-            if(newTrack != null && miniBossMusic == false)
+            if (newTrack != null && bossMusic == false)
             {
                 musicManager.ChangeMusic(newTrack);
-                miniBossMusic = true;
+                bossMusic = true;
             }
-        }
-    }
-    private void OnTriggerExit2D(Collider2D col)
-    {
-        if (col.tag == "Player")
-        {
-            miniBossRadius = false;
         }
     }
 }
