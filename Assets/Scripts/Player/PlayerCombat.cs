@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using ScriptableObjects.ScriptableEnemy.Scripts;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerCombat : MonoBehaviour
 {
@@ -32,6 +33,7 @@ public class PlayerCombat : MonoBehaviour
     private bool grounded = true;
     private bool cooldown = false;
     public bool stunned = false;
+    bool ded = false;
 
     public GameObject blackOutSquare;
 
@@ -47,9 +49,18 @@ public class PlayerCombat : MonoBehaviour
     {
         if (currentHealth <= 0)
         {
+            currentHealth = maxHealth;
+            healthBar.SetMaxHealth(maxHealth);
+            ded = true;
             animator.SetBool("IsDead", true);
             Invoke("Die", 1);
             StartCoroutine(FadeBlackOutSquare());
+        }
+
+        if (LifeCount.lifeCount <= 0)
+        {
+            StartCoroutine(FadeBlackOutSquare());
+            Invoke("GameOver", 0.8f);
         }
 
         if (Mathf.Abs(rb.velocity.y) < 0.001f)
@@ -154,11 +165,24 @@ public class PlayerCombat : MonoBehaviour
     }
     void Die()
     {
-        animator.SetBool("IsDead", false);
-        currentHealth = maxHealth;
-        healthBar.SetMaxHealth(maxHealth);
-        transform.position = respawnPoint.transform.position;
-        StartCoroutine(FadeBlackOutSquare(false));
+        if (ded == true)
+        {
+            ded = false;
+            animator.SetBool("IsDead", false);
+            transform.position = respawnPoint.transform.position;
+            Invoke("FadeIn", 1);
+            LifeCount.lifeCount -= 1;
+        }
+    }
+
+    void FadeIn()
+    {
+            StartCoroutine(FadeBlackOutSquare(false));
+    }
+
+    void GameOver()
+    {
+        SceneManager.LoadScene("GameOver");
     }
 
     public IEnumerator FadeBlackOutSquare(bool fadeToBlack = true, int fadeSpeed = 1)
@@ -171,7 +195,7 @@ public class PlayerCombat : MonoBehaviour
             while (blackOutSquare.GetComponent<Image>().color.a < 1)
             {
                 fadeAmount = objectColor.a + (fadeSpeed * Time.deltaTime);
-
+                Debug.Log("FADETOBLACK");
                 objectColor = new Color(objectColor.r, objectColor.g, objectColor.b, fadeAmount);
                 blackOutSquare.GetComponent<Image>().color = objectColor;
                 yield return null;
@@ -182,7 +206,7 @@ public class PlayerCombat : MonoBehaviour
             while (blackOutSquare.GetComponent<Image>().color.a > 0)
             {
                 fadeAmount = objectColor.a - (fadeSpeed * Time.deltaTime);
-
+                Debug.Log("FADEAWAY");
                 objectColor = new Color(objectColor.r, objectColor.g, objectColor.b, fadeAmount);
                 blackOutSquare.GetComponent<Image>().color = objectColor;
                 yield return null;
