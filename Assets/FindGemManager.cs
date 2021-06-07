@@ -4,7 +4,7 @@ using UnityEngine;
 public class FindGemManager : MonoBehaviour
 {
 
-    private NonSceneDependent gemBooleans;
+    public NonSceneDependent gemBooleans;
 
     public GameObject greenGem;
     public GameObject blueGem;
