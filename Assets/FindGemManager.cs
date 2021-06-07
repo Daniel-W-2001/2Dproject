@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class FindGemManager : MonoBehaviour
@@ -11,14 +12,12 @@ public class FindGemManager : MonoBehaviour
     public GameObject yellowGem;
     public GameObject purpleGem;
     
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         gemBooleans = FindObjectOfType<NonSceneDependent>();
     }
 
-    // Update is called once per frame
-    void Update()
+    void Start()
     {
         if (gemBooleans.blue) {
             blueGem.SetActive(true);
@@ -35,5 +34,16 @@ public class FindGemManager : MonoBehaviour
         if (gemBooleans.purple) {
             purpleGem.SetActive(true);
         }
+
+        StartCoroutine(DisableGems());
+    }
+
+    IEnumerator DisableGems()
+    {
+        yield return new WaitForSeconds(1f);
+        gemBooleans.green = false;
+        gemBooleans.blue = false;
+        gemBooleans.yellow = false;
+        gemBooleans.purple = false;
     }
 }
