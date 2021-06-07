@@ -137317,6 +137317,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorSwitch
       objectReference: {fileID: 0}
+    - target: {fileID: 2590192396455796945, guid: 34eec21270457914a91cf8696127ea3c, type: 3}
+      propertyPath: m_Volume
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 2590192396455796950, guid: 34eec21270457914a91cf8696127ea3c, type: 3}
       propertyPath: ib
       value: 
@@ -137624,6 +137628,10 @@ PrefabInstance:
       propertyPath: OutputAudioMixerGroup
       value: 
       objectReference: {fileID: -1939208350284049346, guid: 839cf7bf574dbbe40abefc4183d9b9a0, type: 2}
+    - target: {fileID: 4087919862629050987, guid: 6938fc71ad5c337428bc7c3cc735755e, type: 3}
+      propertyPath: m_Volume
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 4087919862629050987, guid: 6938fc71ad5c337428bc7c3cc735755e, type: 3}
       propertyPath: OutputAudioMixerGroup
       value: 
