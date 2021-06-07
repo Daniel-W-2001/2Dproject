@@ -43,9 +43,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/PuzzleFolder/TorchTrap.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Witch.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Objects/GemCollectible.cs" />
-        <option value="$PROJECT_DIR$/Assets/NonSceneDependent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GemManager.cs" />
         <option value="$PROJECT_DIR$/Assets/FindGemManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/NonSceneDependent.cs" />
       </list>
     </option>
   </component>

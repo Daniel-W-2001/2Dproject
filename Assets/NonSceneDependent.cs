@@ -20,10 +20,6 @@ public class NonSceneDependent : MonoBehaviour
         }
     }
     
-   
-        
-    
-
     private void Start()
     {
         DontDestroyOnLoad(this);
