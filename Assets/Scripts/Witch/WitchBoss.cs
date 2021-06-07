@@ -20,7 +20,7 @@ public class WitchBoss : MonoBehaviour
     public GameObject spell;
     public GameObject powerSpell;
     GameObject instantiatedObject;
-    //public AudioSource spellSound;
+    public AudioSource spellSound;
 
     public int maxHealth = 500;
     public int currentHealth;
@@ -113,14 +113,14 @@ public class WitchBoss : MonoBehaviour
     {
         instantiatedObject = Instantiate(spell, firePoint.position, firePoint.rotation);
         Destroy(instantiatedObject, 4f);
-        //spellSound.Play();
+        spellSound.Play();
     }
 
     void PowerShoot()
     {
         instantiatedObject = Instantiate(powerSpell, firePoint.position, firePoint.rotation);
-        Destroy(instantiatedObject, 10f);
-        //spellSound.Play();
+        Destroy(instantiatedObject, 7f);
+        spellSound.Play();
     }
     public void TakeDamage(int damage)
     {

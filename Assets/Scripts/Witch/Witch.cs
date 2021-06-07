@@ -16,7 +16,7 @@ public class Witch : MonoBehaviour
     public Transform firePoint;
     public GameObject spell;
     GameObject instantiatedObject;
-    //public AudioSource spellSound;
+    public AudioSource spellSound;
 
     public int maxHealth = 100;
     public int currentHealth;
@@ -68,7 +68,7 @@ public class Witch : MonoBehaviour
     {
         instantiatedObject = Instantiate(spell, firePoint.position, firePoint.rotation);
         Destroy(instantiatedObject, 4f);
-        //spellSound.Play();
+        spellSound.Play();
     }
 
     public void TakeDamage(int damage)

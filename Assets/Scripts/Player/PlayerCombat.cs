@@ -20,6 +20,7 @@ public class PlayerCombat : MonoBehaviour
     public PlayerHealthbar healthBar;
     public GameObject potionPickup;
     public AudioSource healSound;
+    public AudioSource hitSound;
 
     public AudioSource swordSwing;
     public GameObject respawnPoint;
@@ -92,6 +93,7 @@ public class PlayerCombat : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        hitSound.Play();
         StartCoroutine(DamageEffect());
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
