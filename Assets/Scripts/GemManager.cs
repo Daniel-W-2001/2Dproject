@@ -1,9 +1,10 @@
+using System;
 using UnityEngine;
 
 public class GemManager : MonoBehaviour
 {
     
-    public NonSceneDependent NonSceneDependentObject;
+    private NonSceneDependent NonSceneDependentObject;
 
     
     public GameObject greenGem;
@@ -11,6 +12,10 @@ public class GemManager : MonoBehaviour
     public GameObject yellowGem;
     public GameObject purpleGem;
 
+    private void Start()
+    {
+        NonSceneDependentObject = FindObjectOfType<NonSceneDependent>();
+    }
 
 
     // Update is called once per frame
