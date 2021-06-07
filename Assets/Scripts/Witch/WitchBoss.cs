@@ -8,8 +8,6 @@ public class WitchBoss : MonoBehaviour
     public bool isFlipped = false;
     public bool bossDead = false;
 
-    float attackRange = 20f;
-    float finalAttackRange = 11f;
     public Animator animator;
 
     float stage2AttackRate = 0.3f;
@@ -39,6 +37,7 @@ public class WitchBoss : MonoBehaviour
     bool point3done = false;
 
     public GameObject potion;
+    public WitchBossCam radiusScript;
 
     private void Start()
     {
@@ -67,7 +66,7 @@ public class WitchBoss : MonoBehaviour
 
     void Update()
     {
-        if ((Vector2.Distance(transform.position, player.position) <= attackRange) && (Time.time >= nextAttackTime) && (currentHealth > 200))
+        if ((radiusScript.bossRadius == true) && (Time.time >= nextAttackTime) && (currentHealth > 200))
         {
             animator.SetTrigger("Attack");
             Shoot();
@@ -101,7 +100,7 @@ public class WitchBoss : MonoBehaviour
             transform.position = point3.transform.position;
         }
 
-        if ((Vector2.Distance(transform.position, player.position) <= finalAttackRange) && (Time.time >= nextAttackTime) && (currentHealth > 0) && (point3done == true))
+        if ((radiusScript.bossRadius == true) && (Time.time >= nextAttackTime) && (currentHealth > 0) && (point3done == true))
         {
             animator.SetTrigger("Attack");
             PowerShoot();
