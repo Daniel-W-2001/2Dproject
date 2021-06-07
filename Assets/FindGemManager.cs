@@ -3,9 +3,8 @@ using UnityEngine;
 
 public class FindGemManager : MonoBehaviour
 {
-    public static FindGemManager instance;
 
-    public NonSceneDependent gemBooleans;
+    private NonSceneDependent gemBooleans;
 
     public GameObject greenGem;
     public GameObject blueGem;
