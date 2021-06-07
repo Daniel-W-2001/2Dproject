@@ -19,6 +19,14 @@ public class NonSceneDependent : MonoBehaviour
             return;
         }
     }
+    
+    public void ClickAway()
+    {   
+        green = false;  
+        blue = false;   
+        yellow = false; 
+        purple = false;
+    }
 
     private void Start()
     {
