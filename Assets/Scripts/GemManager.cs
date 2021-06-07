@@ -14,7 +14,7 @@ public class GemManager : MonoBehaviour
 
     private void Start()
     {
-        NonSceneDependentObject = FindObjectOfType<NonSceneDependent>();
+        NonSceneDependentObject = GameObject.Find("NonSceneDependent").GetComponent<NonSceneDependent>();
     }
 
 

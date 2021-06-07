@@ -13,7 +13,7 @@ public class FindGemManager : MonoBehaviour
     
     void Awake()
     {
-        gemBooleans = FindObjectOfType<NonSceneDependent>();
+        gemBooleans = GameObject.Find("NonSceneDependent").GetComponent<NonSceneDependent>();
     }
 
     void Start()
