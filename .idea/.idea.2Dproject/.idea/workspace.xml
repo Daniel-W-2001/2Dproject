@@ -38,7 +38,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/ScriptableEnemy/Scripts/RogueWalk2.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/Dialogue/Scripts/TextLoader.cs" />
         <option value="$PROJECT_DIR$/Assets/TriggerWaves.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/ScriptableEnemy/Scripts/Enemy2.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Enemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PuzzleFolder/TorchTrap.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Witch.cs" />
@@ -46,6 +45,8 @@
         <option value="$PROJECT_DIR$/Assets/NonSceneDependent.cs" />
         <option value="$PROJECT_DIR$/Assets/FindGemManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GemManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Witch/Witch.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/ScriptableEnemy/Scripts/Enemy2.cs" />
       </list>
     </option>
   </component>
@@ -118,24 +119,5 @@
     </state>
     <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/-1680.10.1680.1050@0.0.1920.1080" timestamp="1616418927372" />
     <state x="-13" y="267" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/-1680.39.1680.1050@0.0.1920.1080" timestamp="1622463777157" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/Dialogue/Scripts/TextLoader.cs</url>
-          <line>28</line>
-          <properties documentPath="F:\Git\2Dproject\Assets\Scripts\ScriptableObjects\Dialogue\Scripts\TextLoader.cs" initialLine="28">
-            <startOffsets>
-              <option value="752" />
-            </startOffsets>
-            <endOffsets>
-              <option value="798" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

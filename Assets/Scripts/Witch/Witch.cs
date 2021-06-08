@@ -120,7 +120,7 @@ public class Witch : MonoBehaviour
             this.gameObject.SetActive(false);
             if (!usedAfterDeath)
             {
-                Debug.Log(gameObject.name + " was destroyed to save memory");
+                // Debug.Log(gameObject.name + " was destroyed to save memory");
                 Destroy(gameObject);
                 // Kan være lurt å slette gameObject hvis det ikke skal brukes igjen
             }
