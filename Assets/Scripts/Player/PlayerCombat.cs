@@ -168,6 +168,8 @@ public class PlayerCombat : MonoBehaviour
         if (ded == true)
         {
             ded = false;
+            currentHealth = maxHealth;
+            healthBar.SetMaxHealth(maxHealth);
             animator.SetBool("IsDead", false);
             transform.position = respawnPoint.transform.position;
             Invoke("FadeIn", 1);
