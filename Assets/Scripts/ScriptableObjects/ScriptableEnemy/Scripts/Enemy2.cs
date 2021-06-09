@@ -1,8 +1,5 @@
-using System;
 using System.Collections;
-using System.Globalization;
 using UnityEngine;
-using UnityEngine.U2D;
 
 namespace ScriptableObjects.ScriptableEnemy.Scripts
 {

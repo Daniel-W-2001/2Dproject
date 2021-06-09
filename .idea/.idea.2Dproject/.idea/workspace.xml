@@ -45,8 +45,11 @@
         <option value="$PROJECT_DIR$/Assets/NonSceneDependent.cs" />
         <option value="$PROJECT_DIR$/Assets/FindGemManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GemManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Witch/Witch.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GemCount.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Witch/WitchBoss.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/ScriptableEnemy/Scripts/Enemy2.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Witch/Witch.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Chest.cs" />
       </list>
     </option>
   </component>
