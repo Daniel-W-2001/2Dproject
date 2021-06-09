@@ -9,6 +9,7 @@ public class GemCount : MonoBehaviour
 
     void Start()
     {
+        gemCount = 0;
         text = GetComponent<Text>();
     }
 
